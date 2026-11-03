@@ -1,0 +1,126 @@
+{
+  "at": "2026-11-03T21:31:17.879918+00:00",
+  "execution_started": false,
+  "base": "fcea16c83fa9500615dc104f8ec9bcf70e4364bd",
+  "cases": [
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[bool-two-levels]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[bool-all-false]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[bool-all-true]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[string-two-levels]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[string-one-level]",
+      "baseline_expected": "FAIL_SILENT_ACCEPTANCE",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[nullable-string]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[categorical-numeric]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[categorical-one-level]",
+      "baseline_expected": "FAIL_SILENT_ACCEPTANCE",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[explicit-categorical]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[explicit-categorical-constant]",
+      "baseline_expected": "FAIL_SILENT_ACCEPTANCE",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[comparison-lhs]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_rejects_non_numeric_single_response[numeric-multivariate-lhs]",
+      "baseline_expected": "FAIL_WRONG_EXCEPTION_ValueError",
+      "candidate_expected": "PASS_DataException_numeric0/1",
+      "note": "Pre-registered prediction; actual exception/acceptance must be retained, not silently changed to match observations."
+    },
+    {
+      "test_id": "test_ipw_preserves_numeric_treatment[integer]",
+      "baseline_expected": "PASS",
+      "candidate_expected": "PASS"
+    },
+    {
+      "test_id": "test_ipw_preserves_numeric_treatment[float]",
+      "baseline_expected": "PASS",
+      "candidate_expected": "PASS"
+    },
+    {
+      "test_id": "test_ipw_preserves_numeric_treatment[numeric-transform]",
+      "baseline_expected": "PASS",
+      "candidate_expected": "PASS"
+    },
+    {
+      "test_id": "test_ipw_preserves_numeric_treatment[constant-zero]",
+      "baseline_expected": "PASS",
+      "candidate_expected": "PASS"
+    },
+    {
+      "test_id": "test_ipw_preserves_numeric_treatment[constant-one]",
+      "baseline_expected": "PASS",
+      "candidate_expected": "PASS"
+    },
+    {
+      "test_id": "test_ipw_preserves_numeric_value_validation[0.5]",
+      "baseline_expected": "PASS_existing_DataException",
+      "candidate_expected": "PASS_existing_DataException"
+    },
+    {
+      "test_id": "test_ipw_preserves_numeric_value_validation[2]",
+      "baseline_expected": "PASS_existing_DataException",
+      "candidate_expected": "PASS_existing_DataException"
+    },
+    {
+      "test_id": "test_ipw_preserves_row_dropping_with_duplicate_index",
+      "baseline_expected": "PASS",
+      "candidate_expected": "PASS"
+    }
+  ],
+  "nullable_integer_boolean_contract": "Excluded explicitly: shared Patsy normalization supports pd.NA-backed strings only, and Int64/BooleanDtype evaluation is not established by this issue. No observe-then-fit tests or new dtype support promised; constructor validation of ordinary numpy bool/string is full reported scope. Nullable string is supported by existing normalizer and included.",
+  "source_sha256": "76ab73054d15fa0f7e981e3840422da8d9203f7d42ed05196e0b1cf3b16e430e",
+  "test_sha256": "3eefec151fa3a69f0f37464ce6382a348e8ff9d2d599259d5011bc681471a918",
+  "pre_runtime_revision": {
+    "at": "2026-11-03T21:52:00.291480+00:00",
+    "basis": "PinnedPatsy1.0.3CategoricalSniffer.sniff lines205-209/222-228 alwayssetsboollevelsFalseTrue evenoneobserved. EarlierClaude2/Codexclaimsingleboolsilentlyacceptedwaswrong; ordinaryboolallfalse/alltruebaselineexpected2columnValueError. Single-levelstr/categoryremainones/silentacceptance. No runtime occurred and no outcome fitted."
+  }
+}

@@ -1,0 +1,125 @@
+name: Validate IPW treatment contract
+on:
+  push:
+    branches: [validate-ipw-treatment-1365]
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      epoch: ${{ steps.clock.outputs.epoch }}
+      artifact: ${{ steps.prepared.outputs.artifact-id }}
+    steps:
+      - name: Anchor the only attempt clock before all checkout and setup
+        id: clock
+        run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: packet
+          persist-credentials: false
+      - name: Freeze public docs metadata inside Docker only
+        env:
+          VALIDATION_START_EPOCH: ${{ steps.clock.outputs.epoch }}
+          VALIDATION_KIND: prepare
+        run: python3 packet/host.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        id: prepared
+        with:
+          name: docs-closure
+          path: |
+            runtime/docs-lock.txt
+            runtime/closure.json
+          if-no-files-found: error
+          retention-days: 7
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: evidence-prepare
+          path: runtime/
+          if-no-files-found: error
+          retention-days: 7
+  unit:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: b312p3, mode: baseline, python: '3.12', pandas: pandas3}
+          - {id: c312p3, mode: candidate, python: '3.12', pandas: pandas3}
+          - {id: b312p2, mode: baseline, python: '3.12', pandas: pandas2}
+          - {id: c312p2, mode: candidate, python: '3.12', pandas: pandas2}
+          - {id: b314p3, mode: baseline, python: '3.14', pandas: pandas3}
+          - {id: c314p3, mode: candidate, python: '3.14', pandas: pandas3}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: packet
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: pymc-labs/CausalPy
+          ref: fcea16c83fa9500615dc104f8ec9bcf70e4364bd
+          path: source
+          persist-credentials: false
+      - name: Complete this full unit matrix lane in Docker
+        env:
+          VALIDATION_START_EPOCH: ${{ needs.prepare.outputs.epoch }}
+          VALIDATION_KIND: unit
+          VALIDATION_MODE: ${{ matrix.mode }}
+          VALIDATION_PYTHON: ${{ matrix.python }}
+          VALIDATION_PANDAS: ${{ matrix.pandas }}
+        run: python3 packet/host.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: evidence-${{ matrix.id }}
+          path: runtime/
+          if-no-files-found: error
+          retention-days: 7
+  docs:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {id: bdocs-native, mode: baseline, sampling: native}
+          - {id: cdocs-native, mode: candidate, sampling: native}
+          - {id: bdocs-mock, mode: baseline, sampling: mock}
+          - {id: cdocs-mock, mode: candidate, sampling: mock}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: packet
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: pymc-labs/CausalPy
+          ref: fcea16c83fa9500615dc104f8ec9bcf70e4364bd
+          path: source
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+        with:
+          artifact-ids: ${{ needs.prepare.outputs.artifact }}
+          path: prepared
+          merge-multiple: true
+      - name: Complete both whole notebooks and HTML in Docker
+        env:
+          VALIDATION_START_EPOCH: ${{ needs.prepare.outputs.epoch }}
+          VALIDATION_KIND: docs
+          VALIDATION_MODE: ${{ matrix.mode }}
+          VALIDATION_NOTEBOOK_MODE: ${{ matrix.sampling }}
+          VALIDATION_PYTHON: '3.12'
+        run: python3 packet/host.py
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+        if: always()
+        with:
+          name: evidence-${{ matrix.id }}
+          path: runtime/
+          if-no-files-found: error
+          retention-days: 7

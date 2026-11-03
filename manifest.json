@@ -1,0 +1,145 @@
+{
+  "base": "fcea16c83fa9500615dc104f8ec9bcf70e4364bd",
+  "repo": "pymc-labs/CausalPy",
+  "diagnostic_branch": "validate-ipw-treatment-1365",
+  "target_seconds": 3000,
+  "absolute_seconds": 3600,
+  "prepare_cap_seconds": 180,
+  "container_memory_gib": 13,
+  "host_available_gib": 13.5,
+  "free_disk_gib": 16,
+  "cpus": 4,
+  "work_pressure_gib": 12,
+  "network_gib": {
+    "prepare": 1,
+    "unit": 2,
+    "docs": 4
+  },
+  "images": {
+    "3.12": {
+      "tag": "3.12-bookworm",
+      "image": "python@sha256:034c3e9d991f148d14c32ff8350286b91420baca7757d37819c7a9cc771317a0",
+      "platform": "linux/amd64",
+      "compressed_layer_bytes": 380550829,
+      "config_digest": "sha256:80dd8e523d47e6d0393908d6fd6725d29a8a86aa510adb71121c9c6111b984c2",
+      "version_env": [
+        "PYTHON_VERSION=3.12.16"
+      ],
+      "compiler_history": [
+        "RUN /bin/sh -c set -ex; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tautoconf \t\tautomake \t\tbzip2 \t\tdefault-libmysqlclient-dev \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\timagemagick \t\tlibbz2-dev \t\tlibc6-dev \t\tlibcurl4-openssl-dev \t\tlibdb-dev \t\tlibevent-dev \t\tlibffi-dev \t\tlibgdbm-dev \t\tlibglib2.0-dev \t\tlibgmp-dev \t\tlibjpeg-dev \t\tlibkrb5-dev \t\tliblzma-dev \t\tlibmagickcore-dev \t\tlibmagickwand-dev \t\tlibmaxminddb-dev \t\tlibncurses5-dev \t\tlibncursesw5-dev \t\tlibpng-dev \t\tlibpq-dev \t\tlibreadline-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibtool \t\tlibwebp-dev \t\tlibxml2-dev \t\tlibxslt-dev \t\tlibyaml-dev \t\tmake \t\tpatch \t\tunzip \t\txz-utils \t\tzlib1g-dev \t; \trm -rf /var/lib/apt/lists/* # buildkit"
+      ],
+      "compiler_history_has_gpp": true,
+      "libc_header_history": true
+    },
+    "3.14": {
+      "tag": "3.14-bookworm",
+      "image": "python@sha256:0bdd145eed30ab1466e8afbd51a595f5484aa874ac9df5283369ba508a025d2e",
+      "platform": "linux/amd64",
+      "compressed_layer_bytes": 384674266,
+      "config_digest": "sha256:53512e676f8595b6ccb2c3e14dcda61400e8d10fbd58c08e237d8bfa103155bf",
+      "version_env": [
+        "PYTHON_VERSION=3.14.10"
+      ],
+      "compiler_history": [
+        "RUN /bin/sh -c set -ex; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tautoconf \t\tautomake \t\tbzip2 \t\tdefault-libmysqlclient-dev \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\timagemagick \t\tlibbz2-dev \t\tlibc6-dev \t\tlibcurl4-openssl-dev \t\tlibdb-dev \t\tlibevent-dev \t\tlibffi-dev \t\tlibgdbm-dev \t\tlibglib2.0-dev \t\tlibgmp-dev \t\tlibjpeg-dev \t\tlibkrb5-dev \t\tliblzma-dev \t\tlibmagickcore-dev \t\tlibmagickwand-dev \t\tlibmaxminddb-dev \t\tlibncurses5-dev \t\tlibncursesw5-dev \t\tlibpng-dev \t\tlibpq-dev \t\tlibreadline-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibtool \t\tlibwebp-dev \t\tlibxml2-dev \t\tlibxslt-dev \t\tlibyaml-dev \t\tmake \t\tpatch \t\tunzip \t\txz-utils \t\tzlib1g-dev \t; \trm -rf /var/lib/apt/lists/* # buildkit"
+      ],
+      "compiler_history_has_gpp": true,
+      "libc_header_history": true
+    }
+  },
+  "uv": {
+    "filename": "uv-0.13.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/5c/43/0688ff5142934238f2812e348f4a24e09b57d48bfb38dd8f850325a0d9de/uv-0.13.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "size": 17333810,
+    "digests": {
+      "blake2b_256": "5c430688ff5142934238f2812e348f4a24e09b57d48bfb38dd8f850325a0d9de",
+      "md5": "2e3c3936d9deccce95a2d12d6f75e4c1",
+      "sha256": "22759b8895e1103578de6fb4cd27e94b4399d021023378d29f01333717751fba"
+    }
+  },
+  "overlay_sha256": {
+    "causalpy/experiments/inverse_propensity_weighting.py": "76ab73054d15fa0f7e981e3840422da8d9203f7d42ed05196e0b1cf3b16e430e",
+    "causalpy/tests/test_ipw_treatment_validation.py": "3eefec151fa3a69f0f37464ce6382a348e8ff9d2d599259d5011bc681471a918"
+  },
+  "baseline_sha256": {
+    "causalpy/experiments/inverse_propensity_weighting.py": "d52cf17ade9949d780fcce05496a370ae6f4fd9e18f1ef4071d1a0d5724611ff"
+  },
+  "uv_lock_sha256": "a1d3860c49fd12b5bfa6fab5fd1693a40fcb8e611d6e582733501f495a649e1d",
+  "notebooks": {
+    "inverse-propensity-latent.ipynb": {
+      "0": 2.56496,
+      "4": 0.015469,
+      "6": 0.486649,
+      "9": 0.256184,
+      "11": 0.008485,
+      "14": 146.401746,
+      "15": 1.381892,
+      "16": 0.148324,
+      "18": 0.332041,
+      "20": 0.703797,
+      "22": 0.759208,
+      "24": 1.53441,
+      "26": 0.760667,
+      "29": 0.010335,
+      "31": 1.956274,
+      "33": 0.125564,
+      "35": 0.081175,
+      "37": 0.112252,
+      "40": 0.015833,
+      "41": 49.124485,
+      "42": 0.539353,
+      "44": 0.108833,
+      "46": 0.173721,
+      "48": 0.323107,
+      "49": 1.297536,
+      "52": 0.017147,
+      "53": 0.011602,
+      "55": 32.224992,
+      "56": 0.311718,
+      "57": 0.140478,
+      "59": 1.535548,
+      "62": 0.016529,
+      "63": 105.763599,
+      "64": 1.117659,
+      "66": 0.188651,
+      "67": 1.303248,
+      "69": 29.499674,
+      "71": 62.651524,
+      "73": 32.830478,
+      "75": 0.381624,
+      "76": 0.094929,
+      "79": 2.646525
+    },
+    "inverse-propensity-pymc.ipynb": {
+      "0": 2.835161,
+      "3": 0.014206,
+      "6": 2.328711,
+      "8": 0.155876,
+      "10": 0.2357,
+      "12": 0.13644,
+      "14": 0.026875,
+      "17": 0.487275,
+      "19": 0.449899,
+      "21": 5.856687,
+      "23": 6.294447,
+      "26": 0.020042,
+      "27": 3.688063,
+      "29": 0.541749,
+      "30": 0.527171,
+      "31": 0.526103,
+      "34": 6.074435,
+      "35": 7.125531,
+      "39": 0.311122
+    }
+  },
+  "runtime_approved": true,
+  "public_write_approved": true,
+  "clock": "Prepare job first command epoch; all downstream jobs use SAME epoch, all setup included. No separate preflight/reset.",
+  "docs_resolution": "Docker-only joint metadata resolution, --no-build; shared hash-frozen closure for baseline/candidate. Disclosed difference from upstream sequential install.",
+  "graphviz": "Prepare image discovers actual dpkg version; subsequent docs images require that exact version; record all dpkg versions and binary hashes. This is a disclosed deviation from an initially pinned apt closure.",
+  "notebook_toolchain_pins": {
+    "nbclient": "0.11.0",
+    "papermill": "2.7.0"
+  },
+  "observer_source_proof": "PinnedpublicwheelPapermill2.7.0clientwrap.py72calls self.execute_cell; nbclient0.11.0client.py1067syncmethodcapturesasyncfunction. Patchsynchronousentryandassertobservedcalls,notasyncnameonly."
+}
