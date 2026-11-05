@@ -1,0 +1,276 @@
+name: Validate report tables
+'on':
+  push:
+    branches:
+    - validate-report-tables-816
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      epoch: ${{ steps.clock.outputs.epoch }}
+      artifact: ${{ steps.prepared.outputs.artifact-id }}
+    steps:
+    - name: Anchor the only clock before checkout and setup
+      id: clock
+      run: echo "epoch=$(date +%s)" >> "$GITHUB_OUTPUT"
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: packet
+        persist-credentials: false
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        repository: pymc-labs/CausalPy
+        ref: 9ed134647f0fa33902b8d5444f5d1360859d2a7e
+        path: source
+        persist-credentials: false
+    - name: Complete this exact Docker lane
+      env:
+        VALIDATION_START_EPOCH: ${{ steps.clock.outputs.epoch }}
+        VALIDATION_KIND: prepare
+        VALIDATION_MODE: candidate
+        VALIDATION_PYTHON: '3.12'
+        VALIDATION_PANDAS: pandas3
+      run: python3 packet/host.py
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      id: prepared
+      with:
+        name: prepared-inputs
+        path: 'runtime/docs-lock.txt
+
+          runtime/closure.json
+
+          runtime/formatted-overlay.tar
+
+          runtime/formatted-overlay.json'
+        if-no-files-found: error
+        retention-days: 7
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      if: always()
+      with:
+        name: evidence-prepare
+        path: runtime/
+        if-no-files-found: error
+        retention-days: 7
+  unit:
+    needs:
+    - prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: packet
+        persist-credentials: false
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        repository: pymc-labs/CausalPy
+        ref: 9ed134647f0fa33902b8d5444f5d1360859d2a7e
+        path: source
+        persist-credentials: false
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: ${{ needs.prepare.outputs.artifact }}
+        path: prepared
+        merge-multiple: true
+    - name: Complete this exact Docker lane
+      env:
+        VALIDATION_START_EPOCH: ${{ needs.prepare.outputs.epoch }}
+        VALIDATION_KIND: unit
+        VALIDATION_MODE: candidate
+        VALIDATION_PYTHON: ${{ matrix.python }}
+        VALIDATION_PANDAS: ${{ matrix.pandas }}
+      run: python3 packet/host.py
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      if: always()
+      with:
+        name: evidence-unit-${{ matrix.id }}
+        path: runtime/
+        if-no-files-found: error
+        retention-days: 7
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+        - id: c312p3
+          python: '3.12'
+          pandas: pandas3
+        - id: c312p2
+          python: '3.12'
+          pandas: pandas2
+        - id: c314p3
+          python: '3.14'
+          pandas: pandas3
+  rich:
+    needs:
+    - prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: packet
+        persist-credentials: false
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        repository: pymc-labs/CausalPy
+        ref: 9ed134647f0fa33902b8d5444f5d1360859d2a7e
+        path: source
+        persist-credentials: false
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: ${{ needs.prepare.outputs.artifact }}
+        path: prepared
+        merge-multiple: true
+    - name: Complete this exact Docker lane
+      env:
+        VALIDATION_START_EPOCH: ${{ needs.prepare.outputs.epoch }}
+        VALIDATION_KIND: rich
+        VALIDATION_MODE: candidate
+        VALIDATION_PYTHON: '3.12'
+        VALIDATION_PANDAS: pandas3
+      run: python3 packet/host.py
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      if: always()
+      with:
+        name: evidence-rich
+        path: runtime/
+        if-no-files-found: error
+        retention-days: 7
+  docs_native:
+    needs:
+    - prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: packet
+        persist-credentials: false
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        repository: pymc-labs/CausalPy
+        ref: 9ed134647f0fa33902b8d5444f5d1360859d2a7e
+        path: source
+        persist-credentials: false
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: ${{ needs.prepare.outputs.artifact }}
+        path: prepared
+        merge-multiple: true
+    - name: Complete this exact Docker lane
+      env:
+        VALIDATION_START_EPOCH: ${{ needs.prepare.outputs.epoch }}
+        VALIDATION_KIND: docs
+        VALIDATION_MODE: candidate
+        VALIDATION_PYTHON: '3.12'
+        VALIDATION_PANDAS: pandas3
+        VALIDATION_NOTEBOOK_MODE: native
+      run: python3 packet/host.py
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      id: final_source
+      with:
+        name: final-source
+        path: 'runtime/final-overlay.tar
+
+          runtime/final-overlay.json'
+        if-no-files-found: error
+        retention-days: 7
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      if: always()
+      with:
+        name: evidence-docs-native
+        path: runtime/
+        if-no-files-found: error
+        retention-days: 7
+    outputs:
+      artifact: ${{ steps.final_source.outputs.artifact-id }}
+  docs_mock:
+    needs:
+    - prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: packet
+        persist-credentials: false
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        repository: pymc-labs/CausalPy
+        ref: 9ed134647f0fa33902b8d5444f5d1360859d2a7e
+        path: source
+        persist-credentials: false
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: ${{ needs.prepare.outputs.artifact }}
+        path: prepared
+        merge-multiple: true
+    - name: Complete this exact Docker lane
+      env:
+        VALIDATION_START_EPOCH: ${{ needs.prepare.outputs.epoch }}
+        VALIDATION_KIND: docs
+        VALIDATION_MODE: candidate
+        VALIDATION_PYTHON: '3.12'
+        VALIDATION_PANDAS: pandas3
+        VALIDATION_NOTEBOOK_MODE: mock
+      run: python3 packet/host.py
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      if: always()
+      with:
+        name: evidence-docs-mock
+        path: runtime/
+        if-no-files-found: error
+        retention-days: 7
+  coverage_gate:
+    needs:
+    - prepare
+    - unit
+    - rich
+    - docs_native
+    - docs_mock
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        path: packet
+        persist-credentials: false
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        repository: pymc-labs/CausalPy
+        ref: 9ed134647f0fa33902b8d5444f5d1360859d2a7e
+        path: source
+        persist-credentials: false
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: ${{ needs.prepare.outputs.artifact }}
+        path: prepared
+        merge-multiple: true
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        artifact-ids: ${{ needs.docs_native.outputs.artifact }}
+        path: final
+        merge-multiple: true
+    - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333
+      with:
+        pattern: evidence-*
+        path: coverage-inputs
+        merge-multiple: false
+    - name: Complete this exact Docker lane
+      env:
+        VALIDATION_START_EPOCH: ${{ needs.prepare.outputs.epoch }}
+        VALIDATION_KIND: coverage
+        VALIDATION_MODE: candidate
+        VALIDATION_PYTHON: '3.12'
+        VALIDATION_PANDAS: pandas3
+      run: python3 packet/host.py
+    - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9
+      if: always()
+      with:
+        name: evidence-final-coverage-and-wheel
+        path: runtime/
+        if-no-files-found: error
+        retention-days: 7

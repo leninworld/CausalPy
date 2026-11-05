@@ -1,0 +1,257 @@
+#   Copyright 2022 - 2026 The PyMC Labs Developers
+#
+#   Licensed under the Apache License, Version 2.0 (the "License");
+#   you may not use this file except in compliance with the License.
+#   You may obtain a copy of the License at
+#
+#       http://www.apache.org/licenses/LICENSE-2.0
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+"""
+GenerateReport pipeline step.
+
+Collects effect summaries, plots, and sensitivity check results from the
+pipeline context and renders a structured HTML report.
+"""
+
+from __future__ import annotations
+
+import base64
+import io
+import logging
+from pathlib import Path
+from typing import Any
+
+from jinja2 import Environment, FileSystemLoader
+from pandas import DataFrame
+
+from causalpy.pipeline import PipelineContext
+
+logger = logging.getLogger(__name__)
+
+_TEMPLATE_DIR = Path(__file__).resolve().parent.parent / "templates"
+
+
+def _render_effect_table(table: DataFrame) -> str:
+    """Format existing effect estimates without exposing their row index."""
+    # MTable requires unique string column names; retain pandas support for custom schemas.
+    if (
+        table.empty
+        or table.columns.nlevels != 1
+        or not table.columns.is_unique
+        or not all(
+            isinstance(column, str) and column not in {"cases", "self"}
+            for column in table.columns
+        )
+    ):
+        return table.to_html(classes="", index=False, border=0)
+
+    try:
+        from maketables import MTable
+    except ModuleNotFoundError as exc:
+        if exc.name != "maketables":
+            raise
+        return table.to_html(classes="", index=False, border=0)
+
+    display_table = table.copy(deep=True)
+    display_table.index = [""] * len(display_table)
+    display_table.index.name = None
+    # Keep the object internal; default make() displays notebook output.
+    html = MTable(
+        display_table,
+        notes="",
+        caption=None,
+        tab_label=None,
+        rgroup_sep="tb",
+        rgroup_display=True,
+        default_paths=None,
+    ).make(type="html")
+    if not isinstance(html, str):
+        raise TypeError("maketables HTML rendering must return a string")
+    return html
+
+
+class GenerateReport:
+    """Pipeline step that generates an HTML report from pipeline results.
+
+    Parameters
+    ----------
+    include_plots : bool, default True
+        Whether to include diagnostic plots in the report.  Covers both the
+        experiment plot and any figures the sensitivity checks attached to
+        their results, so turning it off leaves the report imageless.
+    include_effect_summary : bool, default True
+        Whether to include the effect summary section.
+    include_sensitivity : bool, default True
+        Whether to include sensitivity analysis results.
+    output_file : str or Path, optional
+        If provided, write the HTML report to this file.
+
+    Notes
+    -----
+    When ``maketables`` is installed, effect-summary tables use its HTML
+    renderer and inherit its global table styling. The already-computed causal
+    estimates are retained; model coefficients are not substituted. Without
+    this optional dependency, reports use pandas HTML. Empty tables and custom
+    column schemas unsupported by the renderer also retain pandas formatting.
+    Sensitivity-check tables always use pandas formatting.
+
+    Examples
+    --------
+    >>> import causalpy as cp  # doctest: +SKIP
+    >>> step = cp.GenerateReport(
+    ...     include_plots=True, output_file="report.html"
+    ... )  # doctest: +SKIP
+    """
+
+    def __init__(
+        self,
+        include_plots: bool = True,
+        include_effect_summary: bool = True,
+        include_sensitivity: bool = True,
+        output_file: str | Path | None = None,
+    ) -> None:
+        self.include_plots = include_plots
+        self.include_effect_summary = include_effect_summary
+        self.include_sensitivity = include_sensitivity
+        self.output_file = Path(output_file) if output_file else None
+
+    def validate(self, context: PipelineContext) -> None:
+        """GenerateReport has no strict prerequisites; it gracefully handles
+        missing data.
+
+        Parameters
+        ----------
+        context : PipelineContext
+            Pipeline context (unused; required by the step interface).
+        """
+
+    @staticmethod
+    def _encode_figure(fig: Any) -> str:
+        """Encode a matplotlib figure as a base64 PNG string."""
+        buf = io.BytesIO()
+        fig.savefig(buf, format="png", dpi=100, bbox_inches="tight")
+        buf.seek(0)
+        return base64.b64encode(buf.read()).decode("utf-8")
+
+    def _render_plot(self, experiment: Any) -> list[str]:
+        """Render experiment plots as base64-encoded PNG strings.
+
+        Experiments are lazy: ``plot()`` requires fitted state, so any
+        guard raised by the experiment propagates to the caller instead of
+        being silently swallowed here. The only tolerated failure is
+        ``NotImplementedError`` — the documented contract of experiments
+        without a unified plot view (``InstrumentalVariable``,
+        ``InversePropensityWeighting``) — which degrades to a report
+        without an experiment figure rather than crashing report
+        generation.
+        """
+        import matplotlib.pyplot as plt
+
+        try:
+            fig, _ = experiment.plot()
+        except NotImplementedError as exc:
+            logger.debug(
+                "plot() not implemented for %s; omitting the experiment "
+                "figure from the report: %s",
+                type(experiment).__name__,
+                exc,
+            )
+            return []
+        plots = [self._encode_figure(fig)]
+        plt.close(fig)
+        return plots
+
+    def _render_check_figures(self, check_result: Any) -> list[str]:
+        """Render the figures a check attached to its result.
+
+        The figures are not closed: they belong to the ``CheckResult`` the
+        caller still holds, and closing them would blank it.
+        """
+        figures: list[str] = []
+        for fig in check_result.figures:
+            try:
+                figures.append(self._encode_figure(fig))
+            except Exception as exc:
+                logger.debug(
+                    "Could not render figure from check %s: %s",
+                    check_result.check_name,
+                    exc,
+                )
+        return figures
+
+    def run(self, context: PipelineContext) -> PipelineContext:
+        """Generate the HTML report and store it in the context.
+
+        Parameters
+        ----------
+        context : PipelineContext
+            Pipeline context providing ``experiment``, ``effect_summary``,
+            and ``sensitivity_results`` (any of which may be ``None``).
+
+        Returns
+        -------
+        PipelineContext
+            The same context with ``report`` populated.
+        """
+        env = Environment(
+            loader=FileSystemLoader(str(_TEMPLATE_DIR)),
+            autoescape=True,
+        )
+        template = env.get_template("report.html")
+
+        effect_summary = None
+        effect_summary_table_html = None
+        if self.include_effect_summary and context.effect_summary is not None:
+            effect_summary = context.effect_summary
+            if effect_summary.table is not None:
+                effect_summary_table_html = _render_effect_table(effect_summary.table)
+
+        plots: list[str] = []
+        if self.include_plots and context.experiment is not None:
+            plots = self._render_plot(context.experiment)
+
+        sensitivity_results: list[dict[str, Any]] = []
+        if self.include_sensitivity and context.sensitivity_results:
+            for cr in context.sensitivity_results:
+                entry: dict[str, Any] = {
+                    "check_name": cr.check_name,
+                    "passed": cr.passed,
+                    "text": cr.text,
+                    "table_html": None,
+                    "figures": (
+                        self._render_check_figures(cr) if self.include_plots else []
+                    ),
+                }
+                if cr.table is not None:
+                    entry["table_html"] = cr.table.to_html(
+                        classes="", index=False, border=0
+                    )
+                sensitivity_results.append(entry)
+
+        html = template.render(
+            effect_summary=effect_summary,
+            effect_summary_table_html=effect_summary_table_html,
+            plots=plots,
+            sensitivity_results=sensitivity_results,
+        )
+
+        context.report = html
+
+        if self.output_file is not None:
+            self.output_file.write_text(html, encoding="utf-8")
+            logger.info("Report written to %s", self.output_file)
+
+        return context
+
+    def __repr__(self) -> str:
+        """Return a string representation of the step."""
+        return (
+            f"GenerateReport(include_plots={self.include_plots}, "
+            f"include_effect_summary={self.include_effect_summary}, "
+            f"include_sensitivity={self.include_sensitivity})"
+        )

@@ -1,0 +1,744 @@
+{
+  "base": "9ed134647f0fa33902b8d5444f5d1360859d2a7e",
+  "repo": "pymc-labs/CausalPy",
+  "diagnostic_branch": "validate-report-tables-816",
+  "target_seconds": 3000,
+  "absolute_seconds": 3600,
+  "prepare_cap_seconds": 360,
+  "container_memory_gib": 13,
+  "host_available_gib": 13.5,
+  "free_disk_gib": 16,
+  "cpus": 4,
+  "work_pressure_gib": 12,
+  "network_gib": {
+    "prepare": 2,
+    "unit": 2,
+    "docs": 4,
+    "rich": 3,
+    "coverage": 2
+  },
+  "images": {
+    "3.12": {
+      "tag": "3.12-bookworm",
+      "image": "python@sha256:034c3e9d991f148d14c32ff8350286b91420baca7757d37819c7a9cc771317a0",
+      "platform": "linux/amd64",
+      "compressed_layer_bytes": 380550829,
+      "config_digest": "sha256:80dd8e523d47e6d0393908d6fd6725d29a8a86aa510adb71121c9c6111b984c2",
+      "version_env": [
+        "PYTHON_VERSION=3.12.16"
+      ],
+      "compiler_history": [
+        "RUN /bin/sh -c set -ex; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tautoconf \t\tautomake \t\tbzip2 \t\tdefault-libmysqlclient-dev \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\timagemagick \t\tlibbz2-dev \t\tlibc6-dev \t\tlibcurl4-openssl-dev \t\tlibdb-dev \t\tlibevent-dev \t\tlibffi-dev \t\tlibgdbm-dev \t\tlibglib2.0-dev \t\tlibgmp-dev \t\tlibjpeg-dev \t\tlibkrb5-dev \t\tliblzma-dev \t\tlibmagickcore-dev \t\tlibmagickwand-dev \t\tlibmaxminddb-dev \t\tlibncurses5-dev \t\tlibncursesw5-dev \t\tlibpng-dev \t\tlibpq-dev \t\tlibreadline-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibtool \t\tlibwebp-dev \t\tlibxml2-dev \t\tlibxslt-dev \t\tlibyaml-dev \t\tmake \t\tpatch \t\tunzip \t\txz-utils \t\tzlib1g-dev \t; \trm -rf /var/lib/apt/lists/* # buildkit"
+      ],
+      "compiler_history_has_gpp": true,
+      "libc_header_history": true
+    },
+    "3.14": {
+      "tag": "3.14-bookworm",
+      "image": "python@sha256:0bdd145eed30ab1466e8afbd51a595f5484aa874ac9df5283369ba508a025d2e",
+      "platform": "linux/amd64",
+      "compressed_layer_bytes": 384674266,
+      "config_digest": "sha256:53512e676f8595b6ccb2c3e14dcda61400e8d10fbd58c08e237d8bfa103155bf",
+      "version_env": [
+        "PYTHON_VERSION=3.14.10"
+      ],
+      "compiler_history": [
+        "RUN /bin/sh -c set -ex; \tapt-get update; \tapt-get install -y --no-install-recommends \t\tautoconf \t\tautomake \t\tbzip2 \t\tdefault-libmysqlclient-dev \t\tdpkg-dev \t\tfile \t\tg++ \t\tgcc \t\timagemagick \t\tlibbz2-dev \t\tlibc6-dev \t\tlibcurl4-openssl-dev \t\tlibdb-dev \t\tlibevent-dev \t\tlibffi-dev \t\tlibgdbm-dev \t\tlibglib2.0-dev \t\tlibgmp-dev \t\tlibjpeg-dev \t\tlibkrb5-dev \t\tliblzma-dev \t\tlibmagickcore-dev \t\tlibmagickwand-dev \t\tlibmaxminddb-dev \t\tlibncurses5-dev \t\tlibncursesw5-dev \t\tlibpng-dev \t\tlibpq-dev \t\tlibreadline-dev \t\tlibsqlite3-dev \t\tlibssl-dev \t\tlibtool \t\tlibwebp-dev \t\tlibxml2-dev \t\tlibxslt-dev \t\tlibyaml-dev \t\tmake \t\tpatch \t\tunzip \t\txz-utils \t\tzlib1g-dev \t; \trm -rf /var/lib/apt/lists/* # buildkit"
+      ],
+      "compiler_history_has_gpp": true,
+      "libc_header_history": true
+    }
+  },
+  "uv": {
+    "filename": "uv-0.13.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/5c/43/0688ff5142934238f2812e348f4a24e09b57d48bfb38dd8f850325a0d9de/uv-0.13.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "size": 17333810,
+    "digests": {
+      "blake2b_256": "5c430688ff5142934238f2812e348f4a24e09b57d48bfb38dd8f850325a0d9de",
+      "md5": "2e3c3936d9deccce95a2d12d6f75e4c1",
+      "sha256": "22759b8895e1103578de6fb4cd27e94b4399d021023378d29f01333717751fba"
+    }
+  },
+  "overlay_sha256": {
+    "causalpy/steps/report.py": "0d1cca7f62e172545e0f1de9400a0df16e69316be8b9c6abf5775cdd49db84db",
+    "causalpy/templates/report.html": "f4cc15c16761e76dd50842fc5f456c0ee2fb113a665f1886ab29b64a7bd4fbd2",
+    "causalpy/tests/test_report_tables.py": "405dca879c45f565aafe1868ba1ca32fd99170236b631bade71a80aaa1005822",
+    "docs/source/notebooks/pipeline-workflow.ipynb": "dfb58723659160bc46d97abf02b94fd2968c8f1f6d587dc6d58166c4b2b53fda",
+    "docs/source/notebooks/reporting-demo.ipynb": "2a24e1f07cd203016844b55d3634316a0208c808cbed2466aab35c47b094a1b9"
+  },
+  "baseline_sha256": {
+    "causalpy/steps/report.py": "35b8b7c0150fbc77a8ca7f2a642f17c43315428a87966e17a4750ae6438c37ad",
+    "causalpy/templates/report.html": "62f59bb054fbf8de3da60e42300a8224399b815d95f5e6df3da25198c93cdc0d",
+    "docs/source/notebooks/pipeline-workflow.ipynb": "ef3060002ada78f53f108a1d5bc81fabe214307d1b8c53bc3a527ad4e0ff0012",
+    "docs/source/notebooks/reporting-demo.ipynb": "52f5e48ca45c65a1962bb5a18de57ca324024183691ea956eb98f06ee42f2a65",
+    "docs/source/notebooks/regression-discontinuity-pymc.ipynb": "c05aa7be57c0237639dda166788bec0e338acf32aa31f0071ef645c7633a7a75",
+    "docs/source/notebooks/regression-kink-pymc.ipynb": "38ac49fc75257061628b01064ee68a00d28e97040ec1505bfaed4a0567c40360",
+    "docs/source/notebooks/staggered-difference-in-differences-pymc.ipynb": "1f79ac992f5cff888fc005f1e46f4906d4fe448a2566b78564f2d9a7a115603d",
+    "docs/source/notebooks/synthetic-control-pymc.ipynb": "2d43134cb8630a22c7fc0e309a9fad1a12e4084c3c186b46095c8377caeda396"
+  },
+  "uv_lock_sha256": "a1d3860c49fd12b5bfa6fab5fd1693a40fcb8e611d6e582733501f495a649e1d",
+  "notebooks": {
+    "pipeline-workflow.ipynb": {
+      "1": 2.771714,
+      "3": 2.54647,
+      "5": 1.968025,
+      "7": 4.32375,
+      "10": 0.020138,
+      "12": 0.010253,
+      "14": 0.009292
+    },
+    "reporting-demo.ipynb": {
+      "1": 2.745764,
+      "3": 2.531007,
+      "5": 0.577903,
+      "7": 0.007621,
+      "9": 4.316843,
+      "10": 0.031628
+    },
+    "regression-discontinuity-pymc.ipynb": {
+      "1": null,
+      "2": 0.045775,
+      "4": null,
+      "6": null,
+      "8": null,
+      "11": null,
+      "14": null,
+      "16": null,
+      "19": 2.432183,
+      "21": 1.400883,
+      "23": 2.443587,
+      "25": 0.046745,
+      "27": 0.062253,
+      "29": 0.032467,
+      "30": 0.02656,
+      "32": 0.033399,
+      "33": 0.024878,
+      "35": 28.676873,
+      "36": 0.260179
+    },
+    "regression-kink-pymc.ipynb": {
+      "1": 2.589542,
+      "2": 0.09832,
+      "4": 0.38092,
+      "7": 0.023914,
+      "9": 0.097208,
+      "12": 2.987256,
+      "14": 0.097596,
+      "17": 0.066785,
+      "19": 0.036422,
+      "21": 0.108338,
+      "22": 2.960877,
+      "24": 0.314184,
+      "26": 0.090895,
+      "28": 0.039181,
+      "30": 4.131152,
+      "31": 0.113724,
+      "33": 0.041027,
+      "35": 7.606335,
+      "37": 0.111971,
+      "39": 14.899332,
+      "40": 0.18602
+    },
+    "staggered-difference-in-differences-pymc.ipynb": {
+      "1": 3.748787,
+      "2": 0.118492,
+      "4": 0.03361,
+      "5": 0.025085,
+      "7": 0.277425,
+      "9": 6.270397,
+      "11": 0.185949,
+      "13": 0.137101,
+      "15": 1.104443,
+      "17": 0.032607,
+      "19": 0.030367,
+      "21": 0.033712,
+      "23": 0.03266,
+      "24": 0.283581,
+      "29": 3.195751,
+      "30": 0.04439
+    },
+    "synthetic-control-pymc.ipynb": {
+      "1": 2.078879,
+      "2": 0.043177,
+      "4": 0.024556,
+      "6": 0.168563,
+      "10": 0.024026,
+      "11": 7.425922,
+      "12": 0.411966,
+      "13": 0.03574,
+      "15": 0.055156,
+      "17": 0.03957,
+      "20": 0.038205,
+      "22": 0.038271,
+      "23": 0.024288,
+      "25": 0.037044,
+      "26": 0.02502,
+      "28": 20.354562,
+      "29": 0.180777
+    }
+  },
+  "runtime_approved": true,
+  "public_write_approved": true,
+  "clock": "Prepare job first command epoch; all downstream jobs use SAME epoch, all setup included. No separate preflight/reset.",
+  "docs_resolution": "Joint hash-frozen metadata resolution of unchanged upstream docs requirements plus current runtime/test/docs; disclosed difference from upstream sequential installs. Actual versions and HTML contract required in both notebook lanes.",
+  "graphviz": "Prepare image discovers actual dpkg version; subsequent docs images require that exact version; record all dpkg versions and binary hashes. This is a disclosed deviation from an initially pinned apt closure.",
+  "notebook_toolchain_pins": {
+    "nbclient": "0.11.0",
+    "papermill": "2.7.0"
+  },
+  "observer_source_proof": "PinnedpublicwheelPapermill2.7.0clientwrap.py72calls self.execute_cell; nbclient0.11.0client.py1067syncmethodcapturesasyncfunction. Patchsynchronousentryandassertobservedcalls,notasyncnameonly.",
+  "approval_note": "PROPOSED flags only: no publication/execution before actual exact-packet Claude approval and independent Codex agreement.",
+  "projection_note": "G0 measured cumulative peak0.95GiB. Full workload admission uses conservative per-process/multiprocess headroom,13GiB hard/12GiB working cap and per-step periodic samples; native runtime still bounded, not guaranteed.",
+  "notebook_code_sha256": {
+    "pipeline-workflow.ipynb": [
+      "04fd50a01d11d5bfb03819c62700871fcfe7cd22b9be15b7d960bf1fda60ab47",
+      "660f18927db16d1d1d2a59695759a8ea50b3ace4f3468ba57935ecee73414a3b",
+      "072810dc1b7a5837b5fa16d9e728023147d1b22c6167899b7e83952b72bf81dc",
+      "4d2570178915f66e84be78d54fa14ad33c90b119a3c86cb941d2ba68ac293be3",
+      "cb287b712e120a4a1f2425284645c34906e144ad0100c15f566dfd2aa6ba7f0c",
+      "377e7e4ca6a5a5666906f3217026e889c64e7966dc3a08dfafc004cea34595aa",
+      "ab2d55dca4f015ba113b60ff7d65d21d38ae07dea3529fbded86ccfa64c63db0"
+    ],
+    "reporting-demo.ipynb": [
+      "04fd50a01d11d5bfb03819c62700871fcfe7cd22b9be15b7d960bf1fda60ab47",
+      "38b6931357ba5eae991e46d23c1c7d1dcb07a806af322da69e86622cc6938175",
+      "0abfd0a49a50a838857b03344f5042ddd8c920d6e1e2339824580298a5e68f5f",
+      "7c32bc9478df1cc9665b5f89369fae647175462f506c07e27d554d5ea7b0e6f9",
+      "c06e45c39ff1fc4d62f085ae56c27e8d3b4678abb13d2204dee30d2b21e1834a",
+      "023277bc9b44debf07f22294c5c57fe6781fcf9bdc79d286a98d88471bc24561"
+    ],
+    "regression-discontinuity-pymc.ipynb": [
+      "cdbc60df1f924103ab99980185ecda8c7c308ce979f338da9f1ede35a127089b",
+      "b343732660df42c99a268d51b65962b75b3f4933251990f028501e2f6c6dc3cd",
+      "055d7126d45e9c60cbe5b39185f4796db356e74b23d6668f57b94d12500d19f5",
+      "0b6a979f17671fa3e40195295915004ce0fabb4e4eb3c3fb2bb34ade74106bd0",
+      "6659af4e19dae327149c0b7bd42d442778c74f5bc16eb3a1dd144f75b8d6a105",
+      "6e8d776443e3d839a8a33bf7fd0abf952f079903772ee4834bc81654316b205f",
+      "286cfd7916c05ef3fc86ee1c2987476b7af99ba92b5c6518b7e39c4f5dfd0c20",
+      "af89f9d7b08ae11a575f97f3fbc26abe8380f97e1b88cb084cc535a6a8435a29",
+      "cd1992e544d812fdbc746d91ea6e2d68be3837fb734ffa830670ea10ed2f4a88",
+      "4560475c78af16de4ee5c8bed03ece0c5196771428af7ae635c00eb417478c68",
+      "edaa3d039e23a77a041cc6af73a837e48d0dbfa63994ecccafd53bc7107dc27f",
+      "d18a7ed78db7282fb678862579bc585e4f46657baefa88b5b34d7d4fd3fdbe63",
+      "4cf4066dbe365a91a89601c2688786e2cd888b0f07e350ce1c4aa0dbea46d959",
+      "682a2ca68a5fd619689ec3a2e9ad12b1f96b3f8e0e6213cf4a282c79aae36677",
+      "bc51c91725b62e9e8363308955d8e197698a5a74cbddf27e792f5fa8f6f006c2",
+      "8aacce27380c9ff75d4472270942c6bc82b1e626a9ff62a9292a2ee04e4136ba",
+      "442609aa3433f77728c4e77571d66b3ffd9370cb74e5161fa8a321fdc4f4304f",
+      "0d822d8ad6fa0c693b7a5349f86d9da5e95e6c2ce21113f6f4b5aa0fed8bb7d2",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47"
+    ],
+    "regression-kink-pymc.ipynb": [
+      "67e0416c031b60a11519219e33811c3f9d60033b25a0d15ff894fe20cd770561",
+      "3adb59b72033b49d217e422b066cd9a6b7fe8e0f351d343432310e53cb74799d",
+      "9ff5760add6f342ea625cea71c3258799b44b6d88cba4ac0043415632a309b70",
+      "e1b6361aae627e8fd179c18496f3c6e1f21e05ceb4ffdd9bfce26bf11c19e779",
+      "e2245a735efd0c08c351ead1d3bcf55baecee4dcf10109e8ecbf799949176654",
+      "7c3be4682311c6f606d121c34e4e0d50ca8eecd6ec18eccb835ea60c785f54f6",
+      "0396ffe1577c56ee4d3e6567e11539ac7a8f65b3c6edfcfbdd14b4cefed214b1",
+      "e49c7ac4bfa98100cf8e6a3fe5c1e7f007ae19b8fb4a03c35eeabe5c07004050",
+      "3d5c5d89626dc224948f24780409342f47d37bf01d047c80a44e5378da32065a",
+      "c5443c3b493f8ad02a662498759d8762bd81d07f9fa318e863f0c7279de69bb7",
+      "6a940a40014f948a4863e2493b356fab8daae388a3aee9a02029ffdf20843499",
+      "007536ff069d261056989ec9d8dd3061bb2c94a04b4eb6e038eb9af657001716",
+      "b8e526cda9a8ae59bd5bd121e957f55a2d7fbde5be1d3a7fd2c5b85a082084ef",
+      "35845ce5cfb116d0df03f9af4ba12adbb4d7dd34d496961bd81fcbfe50950f4d",
+      "d92a13b58beb95b9ec79a9d71c1947d450024bac10bbf2b41ecdc42d39487096",
+      "59891da4649c08773394515d8a466047628b245a51c34f0ba83669a07e0c02f6",
+      "942c27d9d210f8bd541e7f3a2a3591911d6daa1bf6f8c66fe56049eeee6da4e3",
+      "09a7f86d897aa5f12dba9caeeafa30df027e0daa8856da4312d0eb71327a274e",
+      "557adc75cad629105ccdc4d95a3b7703b221849f474f30faf28b889d180e4b63",
+      "1dd81220ce7adf1d521e53ecf21c0765abf978d6ba32d921e56371964afa1f3d",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47"
+    ],
+    "staggered-difference-in-differences-pymc.ipynb": [
+      "8f614a5fafe4ee139e8ad00d35f128ea56fb605523c053b950d7350ab59c4c9d",
+      "7b43f42f22a52c415b5a1c3c11a1044a59eb78d8644c99576c1ed36e911ad129",
+      "8d7f300ae70e6c6c198c09671105702f095fc35f14b0a519462c3158d91ee978",
+      "86a1b06722dc8b6affe2649eeafd290a3e616073626db55ac94e6a2a641bc242",
+      "be3b247581428f3d57dcbfda7e40854eef893e79a10b935c3dc7a9ee95aa3f3d",
+      "9c59f838bb7031c17edc3b01016e7e902aa7a2199b79cd6d37da4208ef93bfda",
+      "76f292bd418011bd4bf555b5267be9cf330947bdcdadc3a780dd6ebe9c3e1f08",
+      "142285dfdd55eb13fb958aead041bfb9883f09e0c91bfa397088efa7f33908cc",
+      "1f1e174cca1385098cd9f508c2f3717362a0a6620e4d701be1fdec5ab248372f",
+      "5ae40aed2c5a2b4ea1aee8300cf448283b319e863375b09524610937721d1eab",
+      "10ab4a083ad4fa52adc4750153d7cee98f35bb8320f8972fd14d0882b5d0d364",
+      "d0ed083a1df473c266bc016bcf3f8b271e676548ffd900509b3c7580bd5cc469",
+      "3173d1bc47715115dab4a88457677c98a2b2eff652a98289bb3996a6336b2e46",
+      "3609f311b359c7482eb5ad08138434b7d83ff0bafc812d0e13c87f36abe64460",
+      "67759890c72b0b93686f23a7f3619fb7c4bc3f6bdce2ddf9bccb4d8a6f3a9e16",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47"
+    ],
+    "synthetic-control-pymc.ipynb": [
+      "17afd3d13532887a9575e2becc724aab32dcea40b6b3861b66e3c522feea2753",
+      "b343732660df42c99a268d51b65962b75b3f4933251990f028501e2f6c6dc3cd",
+      "a0b5d567954417573899947b1f75d3fde1e35008c77f12fb67bf854c42ebeb86",
+      "e0d447b85529bd41aa3f20a8ba243585a13a2b155e7a9d60bd685747bb1a00bf",
+      "5ebf239c326df1c6652df41765f1dcf7f5d9959b04c6acb91107b2c35c61fbad",
+      "4749b43ad02d45d772c4d62cc153dd72043a9dc703dde9b498c433e06498a583",
+      "d152b494c294c1eef21131fd69d3d5098a0d887e715b800e5e2795a1bc98e4a0",
+      "d18a7ed78db7282fb678862579bc585e4f46657baefa88b5b34d7d4fd3fdbe63",
+      "4cf4066dbe365a91a89601c2688786e2cd888b0f07e350ce1c4aa0dbea46d959",
+      "e837410f78e0158776b542686fd06efb3ef0e2afecb05806b0668f40692b4adb",
+      "018f2ca0a6083e940198499b028776a5cfe0a783fa7ada3abeb28a24beaaab89",
+      "e63e8fc41e8a946fe2ce68754e91856d8b3ba0eedea34369bd1603c773fe1186",
+      "bc51c91725b62e9e8363308955d8e197698a5a74cbddf27e792f5fa8f6f006c2",
+      "28f73a8322bb30e2da479c3226b124f6dc236ba913843c44471802e87659b113",
+      "501f0d3c7bdf961bc2f1e72e6c94893cdc9929924fca17849f26b13d5192d041",
+      "20ffc88e6997d7010d58da3acf579edc06ec3e50901674e369bcf9840797ce14",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47"
+    ]
+  },
+  "notebook_cell_sources_sha256": {
+    "pipeline-workflow.ipynb": [
+      "e7aa442c1c9e4807956e99785eb8445092a22dfa41e542728bf2d3fae9aefe98",
+      "04fd50a01d11d5bfb03819c62700871fcfe7cd22b9be15b7d960bf1fda60ab47",
+      "9d194760c2f6efa1ed97d37ed03a0323e1ec19123478399fcefa3f6f317c68ec",
+      "660f18927db16d1d1d2a59695759a8ea50b3ace4f3468ba57935ecee73414a3b",
+      "0a169d6d4026361172f2d525bdad99da348f2b9b5c97a340c1d567f7b1dd18a9",
+      "072810dc1b7a5837b5fa16d9e728023147d1b22c6167899b7e83952b72bf81dc",
+      "513a46515cd3dc18ab198e8d487594c73bab6661b1df83236e83470ded4f9cfe",
+      "4d2570178915f66e84be78d54fa14ad33c90b119a3c86cb941d2ba68ac293be3",
+      "f125a572a7ea2f5ce6fb86d5a741b1bc85b07f418712f8c3f1c96842f1cc9023",
+      "43def3d4302efad07af02e3cadb40995ff02c08720586793097d8910880284a6",
+      "cb287b712e120a4a1f2425284645c34906e144ad0100c15f566dfd2aa6ba7f0c",
+      "36d7f6ed06db59b240031704aa9c24ff319e11e20a1674279a205ea8b33fcc72",
+      "377e7e4ca6a5a5666906f3217026e889c64e7966dc3a08dfafc004cea34595aa",
+      "ab37a9fd072861fc2f56d81dffa8b0be23cd671122b1df6f8a7e14b4c1f36f54",
+      "ab2d55dca4f015ba113b60ff7d65d21d38ae07dea3529fbded86ccfa64c63db0"
+    ],
+    "reporting-demo.ipynb": [
+      "31a8065442cd928ee40f96eaeafbe2c3f2525e6281b89c89b45d6cddcb0fb145",
+      "04fd50a01d11d5bfb03819c62700871fcfe7cd22b9be15b7d960bf1fda60ab47",
+      "12a05ae272ed4b09b0ec45524b142ef055794499b89d1fe04517950a619573a4",
+      "38b6931357ba5eae991e46d23c1c7d1dcb07a806af322da69e86622cc6938175",
+      "3ccf1817b398b3057722ba09aa40c54986dcdad9be716f91554e39736db6292a",
+      "0abfd0a49a50a838857b03344f5042ddd8c920d6e1e2339824580298a5e68f5f",
+      "bb9095417bf9256dfae6dfeafe5220c09f3cafa37245d9ea75d754fb4dd816e6",
+      "7c32bc9478df1cc9665b5f89369fae647175462f506c07e27d554d5ea7b0e6f9",
+      "f5da5a1468dc410346ed5e3dccf1f5ea981a77005fd8909c0bd0b652dfe85d99",
+      "c06e45c39ff1fc4d62f085ae56c27e8d3b4678abb13d2204dee30d2b21e1834a",
+      "023277bc9b44debf07f22294c5c57fe6781fcf9bdc79d286a98d88471bc24561",
+      "08000436bd439a49d181504668a02343565af9c728832087862399b3631fef2b"
+    ],
+    "regression-discontinuity-pymc.ipynb": [
+      "65349b4000329f346102f6a82fc23aa12843ccbf3dc80739d3082ddfeefa84f9",
+      "cdbc60df1f924103ab99980185ecda8c7c308ce979f338da9f1ede35a127089b",
+      "b343732660df42c99a268d51b65962b75b3f4933251990f028501e2f6c6dc3cd",
+      "538ddbe0be2c34c2c371ddc8dcb7857e6c0111585c7b66d082b08c2d5917bae4",
+      "055d7126d45e9c60cbe5b39185f4796db356e74b23d6668f57b94d12500d19f5",
+      "d7e5b775ea2884cc8d53d39b0151fefb7846d81255daf7ff7c9ceeb21eabb854",
+      "0b6a979f17671fa3e40195295915004ce0fabb4e4eb3c3fb2bb34ade74106bd0",
+      "9a1ecf5bbbe958808680386ed8bda92e3a8e343224cb7c2aacf01ca33c687eba",
+      "6659af4e19dae327149c0b7bd42d442778c74f5bc16eb3a1dd144f75b8d6a105",
+      "c765007379de641a55bfc6f75ce0a324586888c5113e0759e11e37b209a36d78",
+      "d7b225a13714ab155a196ef30a711466dc55c6be183368e8e14f1bb298525bff",
+      "6e8d776443e3d839a8a33bf7fd0abf952f079903772ee4834bc81654316b205f",
+      "9b96b5eb6cf5d93f64bd69a4e201496ed49fc320915bd71fae7f039568c20694",
+      "8c0eac95dd3d409fd9452719fc54c0e7571151892c2b83f5d216204c041824b8",
+      "286cfd7916c05ef3fc86ee1c2987476b7af99ba92b5c6518b7e39c4f5dfd0c20",
+      "44e1653601a2e38fbe3d81ad04257a6aa8d24c322ed809c734613108e92e68aa",
+      "af89f9d7b08ae11a575f97f3fbc26abe8380f97e1b88cb084cc535a6a8435a29",
+      "d85dffa7e92fa9f6b18bf8b4304b99a0dce8cb745fdf2f40cec94cba408143e9",
+      "153900e29342a0173860c823a99eb2214a1cab499776487b0b385e1c81a4427f",
+      "cd1992e544d812fdbc746d91ea6e2d68be3837fb734ffa830670ea10ed2f4a88",
+      "7da39ba93a350b2a1f1acd5a2064c1685a3082a4744d452c302768241c9003c5",
+      "4560475c78af16de4ee5c8bed03ece0c5196771428af7ae635c00eb417478c68",
+      "f5fe9d75db8fb17675133eaaa672e886f1039bc3da5fc55764eff846598cbe30",
+      "edaa3d039e23a77a041cc6af73a837e48d0dbfa63994ecccafd53bc7107dc27f",
+      "a49c49ed399213db31a3fd3516d505c5cf45029df998c66dfdbe6dd5ceb5a01e",
+      "d18a7ed78db7282fb678862579bc585e4f46657baefa88b5b34d7d4fd3fdbe63",
+      "7cf2ae107a18c21d395b15a2cfea6c285274ff1828825adb3ad39f430aaeb1c1",
+      "4cf4066dbe365a91a89601c2688786e2cd888b0f07e350ce1c4aa0dbea46d959",
+      "76dcfb1f71850c40b4922b46086472a9217ebc8b133fd8f1199b9a811055fc86",
+      "682a2ca68a5fd619689ec3a2e9ad12b1f96b3f8e0e6213cf4a282c79aae36677",
+      "bc51c91725b62e9e8363308955d8e197698a5a74cbddf27e792f5fa8f6f006c2",
+      "1662cc66bb351365e91a4043c81e83b86c5c4d08b59a69ef011f816c5f0946e5",
+      "8aacce27380c9ff75d4472270942c6bc82b1e626a9ff62a9292a2ee04e4136ba",
+      "442609aa3433f77728c4e77571d66b3ffd9370cb74e5161fa8a321fdc4f4304f",
+      "b4410ebee5917e9e271730a404353844b8339d2a5848318c046450fee1bc8036",
+      "0d822d8ad6fa0c693b7a5349f86d9da5e95e6c2ce21113f6f4b5aa0fed8bb7d2",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47",
+      "e92a20bcd2ab2a1535a6bedf177590192ebdb231366cc024935909db3e28e698"
+    ],
+    "regression-kink-pymc.ipynb": [
+      "d1545a07fe447ed1fb484929d311c714e27b48f425ce51a0209e7c95260ec63c",
+      "67e0416c031b60a11519219e33811c3f9d60033b25a0d15ff894fe20cd770561",
+      "3adb59b72033b49d217e422b066cd9a6b7fe8e0f351d343432310e53cb74799d",
+      "c14c2e3b5c34a5ee096134bd6b6058ca37e9ff9e1b20f3a5b2bf6a43c6193854",
+      "9ff5760add6f342ea625cea71c3258799b44b6d88cba4ac0043415632a309b70",
+      "f6e3feb00b0172bba026ec79953dd7a037cceacae75c68b9394a18126bfd36d2",
+      "32eb2292ac37c55086c4e223284c051f589dba21a714f225b6c3be2d36383af0",
+      "e1b6361aae627e8fd179c18496f3c6e1f21e05ceb4ffdd9bfce26bf11c19e779",
+      "935d03a7aefc8e7db3464afafa0c5df54d036caeac4c5560815829eb7365d0e4",
+      "e2245a735efd0c08c351ead1d3bcf55baecee4dcf10109e8ecbf799949176654",
+      "7f85c96497959ec6e9b92b11c0463f34b7c3128a76c5df251f1045be64517189",
+      "60a85e719a144446fe4093afecd4a2295548fef59559ac2be6a03d202310f118",
+      "7c3be4682311c6f606d121c34e4e0d50ca8eecd6ec18eccb835ea60c785f54f6",
+      "023f52bd1d0e26d9a3b4bc188c62e4dfb85b64024a7e6e747dbf0b361a5f7a73",
+      "0396ffe1577c56ee4d3e6567e11539ac7a8f65b3c6edfcfbdd14b4cefed214b1",
+      "614a2b0599c69747f7fc83e63beb423c6e43919a4e50e63bd6deba88bea52f5a",
+      "8df15ad872be13bae4eab679c01439634d1e4523585780d3bdb17caeb56f684a",
+      "e49c7ac4bfa98100cf8e6a3fe5c1e7f007ae19b8fb4a03c35eeabe5c07004050",
+      "8541842faf7921bb859ce731485afda2f9974ccc14172debf0c9d57721cc26ad",
+      "3d5c5d89626dc224948f24780409342f47d37bf01d047c80a44e5378da32065a",
+      "d59d06d54a566b67c68be8e0053cd22826868dc6bcddb5e87ac67a146c76f997",
+      "c5443c3b493f8ad02a662498759d8762bd81d07f9fa318e863f0c7279de69bb7",
+      "6a940a40014f948a4863e2493b356fab8daae388a3aee9a02029ffdf20843499",
+      "46963125a5283b2ac54ac6b39de9f2f55be67b2dc5ebe14d7dadf5616b3444f4",
+      "007536ff069d261056989ec9d8dd3061bb2c94a04b4eb6e038eb9af657001716",
+      "b4a62e97a4ff3b7d211225687e5e4ad3ab7da0e206671e401c831d7025223d04",
+      "b8e526cda9a8ae59bd5bd121e957f55a2d7fbde5be1d3a7fd2c5b85a082084ef",
+      "f82930bffb7304d3ecf717453a33729cbbec2ec3a2d531370e0786e6bc820334",
+      "35845ce5cfb116d0df03f9af4ba12adbb4d7dd34d496961bd81fcbfe50950f4d",
+      "75ae2a5018a8ec414d3bfc9de200ca3f1bbb3e691b2f16279fe0a7aa51638b76",
+      "d92a13b58beb95b9ec79a9d71c1947d450024bac10bbf2b41ecdc42d39487096",
+      "59891da4649c08773394515d8a466047628b245a51c34f0ba83669a07e0c02f6",
+      "19ebab69cbdb50d74e61b0a14eb0a00710bc94af9e0bccced7829071493fb432",
+      "942c27d9d210f8bd541e7f3a2a3591911d6daa1bf6f8c66fe56049eeee6da4e3",
+      "5c236d006f5f0df075fd9549212d5b1b6c447e7aa1564b022b88db0ef186294b",
+      "09a7f86d897aa5f12dba9caeeafa30df027e0daa8856da4312d0eb71327a274e",
+      "c466b7091a69c229e89aaa9f51921ce9aca3987ed8f037d30fe219f9752e95e8",
+      "557adc75cad629105ccdc4d95a3b7703b221849f474f30faf28b889d180e4b63",
+      "b3d7999af80248cceae6a0a219d9b3e2a0e68df87905614775daa77f3fa8c07c",
+      "1dd81220ce7adf1d521e53ecf21c0765abf978d6ba32d921e56371964afa1f3d",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47",
+      "14a613db206fa5b148016fa2572ff934b2de1df7d1a30051535ad55561af789e",
+      "91f57976c8cf539c28caa39e8e774795853f4271a23b1b188f9efdd67bbefb53"
+    ],
+    "staggered-difference-in-differences-pymc.ipynb": [
+      "f940de6a52d685b537219fe4acf97850b629a463c69648a36e1865d9a6f65dc1",
+      "8f614a5fafe4ee139e8ad00d35f128ea56fb605523c053b950d7350ab59c4c9d",
+      "7b43f42f22a52c415b5a1c3c11a1044a59eb78d8644c99576c1ed36e911ad129",
+      "ea8652b5eefcb1db740b2cf7df38c902ac1f01ea03d407b95777e277cf6ba080",
+      "8d7f300ae70e6c6c198c09671105702f095fc35f14b0a519462c3158d91ee978",
+      "86a1b06722dc8b6affe2649eeafd290a3e616073626db55ac94e6a2a641bc242",
+      "c66faad283d4610eb2490f8287c711e3304c65e3c079472eb68585ea0a628d65",
+      "be3b247581428f3d57dcbfda7e40854eef893e79a10b935c3dc7a9ee95aa3f3d",
+      "0cd8e99f8dbad7b199b0cd918281ee2325a829097dd9a9cd132cf18911a32c50",
+      "9c59f838bb7031c17edc3b01016e7e902aa7a2199b79cd6d37da4208ef93bfda",
+      "f957c9e19f8e18d04b2b4acc55978c171a0da5c1eec392f260fc75cbdac0ac26",
+      "76f292bd418011bd4bf555b5267be9cf330947bdcdadc3a780dd6ebe9c3e1f08",
+      "9975281d621dd734671b5fadc16a0c3644a7130254668502f36a387c251ccf7a",
+      "142285dfdd55eb13fb958aead041bfb9883f09e0c91bfa397088efa7f33908cc",
+      "7cf2ae107a18c21d395b15a2cfea6c285274ff1828825adb3ad39f430aaeb1c1",
+      "1f1e174cca1385098cd9f508c2f3717362a0a6620e4d701be1fdec5ab248372f",
+      "d9293ee38851341c253da145b625994b088ecb62672794fc9e540a6e19edb5af",
+      "5ae40aed2c5a2b4ea1aee8300cf448283b319e863375b09524610937721d1eab",
+      "36555d690fa3e536744f25d82cc1bfd909eb86d0ce6dbb31f7fcb7f039cd319e",
+      "10ab4a083ad4fa52adc4750153d7cee98f35bb8320f8972fd14d0882b5d0d364",
+      "5f6af181c0429bc724b0c6c173ceac2736555df6753ba2659c549f2049a56aeb",
+      "d0ed083a1df473c266bc016bcf3f8b271e676548ffd900509b3c7580bd5cc469",
+      "a5ec1367581f80f66ff41f5285ef95d6ad9a3adc2314ee9beef3dff176dc00f1",
+      "3173d1bc47715115dab4a88457677c98a2b2eff652a98289bb3996a6336b2e46",
+      "3609f311b359c7482eb5ad08138434b7d83ff0bafc812d0e13c87f36abe64460",
+      "47799f0703fce14530e2ff5ea2be696cad8484588abf509ee3608c3fe840994d",
+      "8467ed9bc71dbc8d25ed2d25dd7868dba3f655da1fd5b087f975cb02b527bb88",
+      "2cd3537f934435275ec3506fafe9cf49c3f5fb0406c16a8da2a6c1e7ca2b0252",
+      "1fd3595535773ef49ca4f892c53e9753fd86ce4a598c28291d04c1bb20c653ba",
+      "67759890c72b0b93686f23a7f3619fb7c4bc3f6bdce2ddf9bccb4d8a6f3a9e16",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47",
+      "91f57976c8cf539c28caa39e8e774795853f4271a23b1b188f9efdd67bbefb53"
+    ],
+    "synthetic-control-pymc.ipynb": [
+      "ea43a2a5bb85d22ad51bf12212e65fbbe51d0239256e1158a3133b35b8661a08",
+      "17afd3d13532887a9575e2becc724aab32dcea40b6b3861b66e3c522feea2753",
+      "b343732660df42c99a268d51b65962b75b3f4933251990f028501e2f6c6dc3cd",
+      "aa936cb25c761daeacff8c7385c4594a4c8b19f40ee261f1cd9d5541bf8f9f27",
+      "a0b5d567954417573899947b1f75d3fde1e35008c77f12fb67bf854c42ebeb86",
+      "5a2b7f1d28cfc734fbdd286163c4c3070615a7de5d25d8e523022c6a517c2a1f",
+      "e0d447b85529bd41aa3f20a8ba243585a13a2b155e7a9d60bd685747bb1a00bf",
+      "7e57ab8906b9612074a070e9256328849704d6d162c7c916332049a9f2ce0a36",
+      "40235cc7c6c20902ccf2ec4f563ae97058459e5753489473e6b9d8cc1251f8b4",
+      "81ad6b90adf5dc85714e8c7635fa257ec552c3162b61d3508995148097bd1b34",
+      "5ebf239c326df1c6652df41765f1dcf7f5d9959b04c6acb91107b2c35c61fbad",
+      "4749b43ad02d45d772c4d62cc153dd72043a9dc703dde9b498c433e06498a583",
+      "d152b494c294c1eef21131fd69d3d5098a0d887e715b800e5e2795a1bc98e4a0",
+      "d18a7ed78db7282fb678862579bc585e4f46657baefa88b5b34d7d4fd3fdbe63",
+      "7cf2ae107a18c21d395b15a2cfea6c285274ff1828825adb3ad39f430aaeb1c1",
+      "4cf4066dbe365a91a89601c2688786e2cd888b0f07e350ce1c4aa0dbea46d959",
+      "f058b5ddf057a7d3e37629d72836fac2b7f6538be473550aa25ac0a8a51cbbf8",
+      "e837410f78e0158776b542686fd06efb3ef0e2afecb05806b0668f40692b4adb",
+      "b5fb9028662f3a5a46398973bef55a337e3e4c2b4b1a11c95d9dfed5037af78a",
+      "09ee06a3d1617e3186c1cf73295b9e7a3fb1c115fb5ca51d5a6391b117c16e5a",
+      "018f2ca0a6083e940198499b028776a5cfe0a783fa7ada3abeb28a24beaaab89",
+      "e613e549c7bd54a797a21de549d95f6464981040642788c62e8d90372721f0da",
+      "e63e8fc41e8a946fe2ce68754e91856d8b3ba0eedea34369bd1603c773fe1186",
+      "bc51c91725b62e9e8363308955d8e197698a5a74cbddf27e792f5fa8f6f006c2",
+      "170197c28410491880fdc1513a5eee70acf192bab004b239c490a1350e918a70",
+      "28f73a8322bb30e2da479c3226b124f6dc236ba913843c44471802e87659b113",
+      "501f0d3c7bdf961bc2f1e72e6c94893cdc9929924fca17849f26b13d5192d041",
+      "d6c3f764f59f3e18362740663e728017c744a9adb06e07e35010bb354297452b",
+      "20ffc88e6997d7010d58da3acf579edc06ec3e50901674e369bcf9840797ce14",
+      "6c5b6549fc4b45ecc6281f53735efa700f64d7adfe67e52259b873b1233fcb47",
+      "91f57976c8cf539c28caa39e8e774795853f4271a23b1b188f9efdd67bbefb53"
+    ]
+  },
+  "final_allowed_paths": [
+    "causalpy/steps/report.py",
+    "causalpy/templates/report.html",
+    "causalpy/tests/test_report_tables.py",
+    "docs/source/notebooks/pipeline-workflow.ipynb",
+    "docs/source/notebooks/reporting-demo.ipynb",
+    "docs/source/notebooks/regression-discontinuity-pymc.ipynb",
+    "docs/source/notebooks/regression-kink-pymc.ipynb",
+    "docs/source/notebooks/staggered-difference-in-differences-pymc.ipynb",
+    "docs/source/notebooks/synthetic-control-pymc.ipynb",
+    "docs/source/_static/thumbnails/pipeline-workflow.png",
+    "docs/source/_static/thumbnails/reporting-demo.png",
+    "docs/source/_static/thumbnails/regression-discontinuity-pymc.png",
+    "docs/source/_static/thumbnails/regression-kink-pymc.png",
+    "docs/source/_static/thumbnails/staggered-difference-in-differences-pymc.png",
+    "docs/source/_static/thumbnails/synthetic-control-pymc.png",
+    "docs/source/notebooks/index.md"
+  ],
+  "gallery_inventory": [
+    {
+      "stem": "ancova-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "panel-fixed-effects",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "synthetic-control-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "synthetic-control-brexit-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "synthetic-difference-in-differences-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interactive-fixed-effects-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "augmented-synthetic-control-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "comparing-bayesian-synthetic-control-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-causalpy-vs-causalimpact",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "geolift-single-cell",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "multi-cell-geolift",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "up-down-control-geolift-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "difference-in-differences-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "difference-in-differences-banks-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "staggered-difference-in-differences-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-post-intervention-analysis",
+      "has_outputs": true,
+      "has_png": false,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-covid",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-lift-test",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-placebo-in-time-analysis",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-comparative-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "piecewise-interrupted-time-series-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "regression-discontinuity-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "regression-discontinuity-drinking-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "regression-discontinuity-donut-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "regression-kink-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "instrumental-variables-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "instrumental-variables-weak-instruments",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "instrumental-variables-variable-selection-priors",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "inverse-propensity-pymc",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "inverse-propensity-latent",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "pipeline-workflow",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "reporting-demo",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "synthetic-control-sklearn",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "difference-in-differences-sklearn",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "interrupted-time-series-sklearn",
+      "has_outputs": true,
+      "has_png": true,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "regression-discontinuity-sklearn",
+      "has_outputs": true,
+      "has_png": false,
+      "gallery_would_execute": false
+    },
+    {
+      "stem": "regression-discontinuity-drinking-sklearn",
+      "has_outputs": true,
+      "has_png": false,
+      "gallery_would_execute": false
+    }
+  ],
+  "focused_cases": 21,
+  "tested_optional_versions": {
+    "maketables": "0.2.0",
+    "great-tables": "0.24.0"
+  },
+  "admission_forecast_seconds": {
+    "prepare": 360,
+    "unit": 2400,
+    "rich": 1050,
+    "docs-native": 2460,
+    "docs-mock": 1800,
+    "coverage": 660
+  },
+  "forecast_basis": {
+    "unit": "Prior identical-library fullCI max1089s/fulltest cap1750+type90+doctest150+correctness240+extra45+codespell60+setup240=2575cap; practical conservative forecast2400, later perstep hardcaps remain. Actual setupG0~49s onARM, x86coldnotmeasured.",
+    "docs-native": "Setup600+native6reference forecast~900+HTML300+prek240+backend180+bookkeeping240=2460; forecast, not measured guarantee. Unknowntimings use nonzero conservativeproxy and livecellforecast.",
+    "docs-mock": "Parallel setup600+sixmockreferenceforecast900+backend180+bookkeeping120=1800; no secondSphinx.",
+    "coverage": "Setup240+combine/xml/diff120+finalchecks180+wheel120=660; beginsafterallparallelwork, includesrunqueue time in sharedclock."
+  }
+}
