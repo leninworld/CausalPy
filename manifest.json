@@ -1,0 +1,1791 @@
+{
+  "base": "35a8c5f9dde5d3a49e6b2043e3b70b567af8de08",
+  "source_tree": "e7de9917554a79a7123f6dcdd4eb53384147be2e",
+  "tracked_source": {
+    ".agents/skills/README.md": {
+      "mode": "100644",
+      "git_oid": "8b90963f9158634ebb5104b230843d6627b5e28e",
+      "bytes": 668
+    },
+    ".github/dependabot.yml": {
+      "mode": "100644",
+      "git_oid": "30a3b95eee7d0c0323ae19683fbac4b9f7d35a91",
+      "bytes": 1137
+    },
+    ".github/release-drafts/1.0.0rc1.md": {
+      "mode": "100644",
+      "git_oid": "9f341bd8b439f216bb62c11d3242682bf3796e77",
+      "bytes": 15093
+    },
+    ".github/release.yml": {
+      "mode": "100644",
+      "git_oid": "34c3bc30c9f2508f14f73449983f2203224e4fac",
+      "bytes": 893
+    },
+    ".github/workflows/ci.yml": {
+      "mode": "100644",
+      "git_oid": "0024cfe755297bb10fe5cd4526ab16007fa3d67a",
+      "bytes": 15394
+    },
+    ".github/workflows/contributors.yml": {
+      "mode": "100644",
+      "git_oid": "8e97382fe0f097122efbb19930331bd72d9c8f12",
+      "bytes": 12037
+    },
+    ".github/workflows/nightly.yml": {
+      "mode": "100644",
+      "git_oid": "bf0d2e296643b7133e74dd2c3f5e066629fa1beb",
+      "bytes": 4730
+    },
+    ".github/workflows/pr-issue-label-sync.yml": {
+      "mode": "100644",
+      "git_oid": "eb58d624f65c23d5f7e08d9bef9ebce81bd54527",
+      "bytes": 619
+    },
+    ".github/workflows/release.yml": {
+      "mode": "100644",
+      "git_oid": "a3622f568585ccf57787816199e54c7b45999b2b",
+      "bytes": 4203
+    },
+    ".github/workflows/test_notebook.yml": {
+      "mode": "100644",
+      "git_oid": "5ada45070e27b1d3d2cf6f33d1dab3d6c4d7f68d",
+      "bytes": 3381
+    },
+    ".github/workflows/uml.yml": {
+      "mode": "100644",
+      "git_oid": "f1136d554e531a07076e1449017cbe7ef58b6f5a",
+      "bytes": 2247
+    },
+    ".github/workflows/welcome.yml": {
+      "mode": "100644",
+      "git_oid": "346058fa8e857f6ba541553d78ad5ee14cf44837",
+      "bytes": 3405
+    },
+    ".github/workflows/zizmor.yml": {
+      "mode": "100644",
+      "git_oid": "36ceecbd7e34050cc1b477db071aba05f1015809",
+      "bytes": 1644
+    },
+    ".gitignore": {
+      "mode": "100644",
+      "git_oid": "19ab27e6e8eb3f777c81a14244aab1fcd86ceeb7",
+      "bytes": 721
+    },
+    ".pre-commit-config.yaml": {
+      "mode": "100644",
+      "git_oid": "6c0f0446865f664d1bc22be60535c1680dfef2b3",
+      "bytes": 7676
+    },
+    ".python-version": {
+      "mode": "100644",
+      "git_oid": "e4fba2183587225f216eeada4c78dfab6b2e65f5",
+      "bytes": 5
+    },
+    ".readthedocs.yaml": {
+      "mode": "100644",
+      "git_oid": "7a4c376fed54022f933cf6b39158eadee5193c02",
+      "bytes": 1819
+    },
+    "AGENTS.md": {
+      "mode": "100644",
+      "git_oid": "c6ae2039501a05b5d7d178e8ef743b43b79d9f8a",
+      "bytes": 16002
+    },
+    "ARCHITECTURE.md": {
+      "mode": "100644",
+      "git_oid": "b7cadab4aa4402121f4b1df0b4071f3f3ea78e0a",
+      "bytes": 21644
+    },
+    "CONTRIBUTING.md": {
+      "mode": "100644",
+      "git_oid": "492dfc606166c64d8e1b537f937ca9f979a8c6f9",
+      "bytes": 25920
+    },
+    "LICENSE": {
+      "mode": "100644",
+      "git_oid": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "bytes": 11357
+    },
+    "Makefile": {
+      "mode": "100644",
+      "git_oid": "f814d382879200868e70c3fee7385b5d76d2509a",
+      "bytes": 5507
+    },
+    "README.md": {
+      "mode": "100644",
+      "git_oid": "881f49e2db1334b485742ffcda2fb1de3ec1b7d1",
+      "bytes": 11391
+    },
+    "causalpy/__init__.py": {
+      "mode": "100644",
+      "git_oid": "35702ae0fa50fd19ab5ea993d008c404e61cbf1c",
+      "bytes": 3412
+    },
+    "causalpy/_arviz_compat.py": {
+      "mode": "100644",
+      "git_oid": "ef7bdf03428d0b9ac0da6688f045310264594b07",
+      "bytes": 8656
+    },
+    "causalpy/checks/__init__.py": {
+      "mode": "100644",
+      "git_oid": "63b1d2403ace1de11650d628b8b363f5e4c74189",
+      "bytes": 2112
+    },
+    "causalpy/checks/_plot_helpers.py": {
+      "mode": "100644",
+      "git_oid": "3ef31459fd748e817afc3437752081afc7bd2701",
+      "bytes": 1906
+    },
+    "causalpy/checks/bandwidth.py": {
+      "mode": "100644",
+      "git_oid": "6ffdac1dd52f8cdfbd4bf6290640383d47a0bc44",
+      "bytes": 4829
+    },
+    "causalpy/checks/base.py": {
+      "mode": "100644",
+      "git_oid": "dab08f936d0bb19f45284c8be10a97fc4e92cee9",
+      "bytes": 4034
+    },
+    "causalpy/checks/convex_hull.py": {
+      "mode": "100644",
+      "git_oid": "1bae3647de9ce7fc48ca116a59c25f4360da9a8c",
+      "bytes": 4208
+    },
+    "causalpy/checks/leave_one_out.py": {
+      "mode": "100644",
+      "git_oid": "19e1f38be8f12a2bddd3ee42c32d498375a5060b",
+      "bytes": 4657
+    },
+    "causalpy/checks/mccrary.py": {
+      "mode": "100644",
+      "git_oid": "262231d2d3165e71be5e36d746cabc6efc2e2207",
+      "bytes": 7435
+    },
+    "causalpy/checks/operating_characteristics.py": {
+      "mode": "100644",
+      "git_oid": "17838ce0ad86030e90045bd099ff2aa92fc9ecb5",
+      "bytes": 26611
+    },
+    "causalpy/checks/outcome_falsification.py": {
+      "mode": "100644",
+      "git_oid": "2b4edca5f89a6e88ed34c0016e568671fcc74d4a",
+      "bytes": 14726
+    },
+    "causalpy/checks/persistence.py": {
+      "mode": "100644",
+      "git_oid": "9f1d887b3cde23d38eb26eefa8258bc431dd1cd3",
+      "bytes": 4864
+    },
+    "causalpy/checks/placebo_in_space.py": {
+      "mode": "100644",
+      "git_oid": "3fc3657f8ecbd2115a7047df3a3b503774eda565",
+      "bytes": 19233
+    },
+    "causalpy/checks/placebo_in_time.py": {
+      "mode": "100644",
+      "git_oid": "1821c5b39279168c91c47633c3515956e3b1b444",
+      "bytes": 95589
+    },
+    "causalpy/checks/pre_treatment_placebo.py": {
+      "mode": "100644",
+      "git_oid": "3ebf169e665b4fb6fdd47fbaa933dad5569986b1",
+      "bytes": 10426
+    },
+    "causalpy/checks/prior_sensitivity.py": {
+      "mode": "100644",
+      "git_oid": "54cca8e95dc6605ddd68740533c8cf28c7842771",
+      "bytes": 6166
+    },
+    "causalpy/constants.py": {
+      "mode": "100644",
+      "git_oid": "009da113edabdf2160d6c39369757018b28aacb7",
+      "bytes": 1297
+    },
+    "causalpy/custom_exceptions.py": {
+      "mode": "100644",
+      "git_oid": "c35f94a903b2f1d7f54595a192951db63853c605",
+      "bytes": 3228
+    },
+    "causalpy/data/AJR2001.csv": {
+      "mode": "100644",
+      "git_oid": "3d37e355eca4319c832b74789a69be367c4516ef",
+      "bytes": 11868
+    },
+    "causalpy/data/GDP_in_dollars_billions.csv": {
+      "mode": "100644",
+      "git_oid": "ee6379bcb5124034b9be3d845d23c76e7b5c535c",
+      "bytes": 11574
+    },
+    "causalpy/data/PISA18sampleScale.csv": {
+      "mode": "100644",
+      "git_oid": "da14ae1daf042035e48e208b65b5092823cd8314",
+      "bytes": 12710
+    },
+    "causalpy/data/__init__.py": {
+      "mode": "100644",
+      "git_oid": "e686fe7945d49924bff6429d4ab5c3261d8d3563",
+      "bytes": 706
+    },
+    "causalpy/data/banks.csv": {
+      "mode": "100644",
+      "git_oid": "9d4b9c74aeb065885e8df4d32ee01443a8041d0f",
+      "bytes": 77216
+    },
+    "causalpy/data/california_prop99.csv": {
+      "mode": "100644",
+      "git_oid": "65b4a11073d152015784fa610f55b1edeca114d7",
+      "bytes": 13466
+    },
+    "causalpy/data/data_nevo.csv": {
+      "mode": "100644",
+      "git_oid": "d6eced60a3003df133b0470f228f9f7f14a13226",
+      "bytes": 517081
+    },
+    "causalpy/data/datasets.py": {
+      "mode": "100644",
+      "git_oid": "d12a87a657132face482c5466595dc5e84984e43",
+      "bytes": 5953
+    },
+    "causalpy/data/deaths_and_temps_england_wales.csv": {
+      "mode": "100644",
+      "git_oid": "efed3fd051cedc6d39c7ab6fa5c76fbed69dfb15",
+      "bytes": 7379
+    },
+    "causalpy/data/drinking.csv": {
+      "mode": "100644",
+      "git_oid": "e2e58d6c6d3ab19066f10d02a9ccce57b60138bf",
+      "bytes": 9109
+    },
+    "causalpy/data/lalonde.csv": {
+      "mode": "100644",
+      "git_oid": "fb1e6e7827f22103cd5a96a1d92fb6ac657ffa93",
+      "bytes": 35793
+    },
+    "causalpy/data/nets_df.csv": {
+      "mode": "100644",
+      "git_oid": "aa2578e3f48a4f00a6c04451496d152fb84bd5a5",
+      "bytes": 67125
+    },
+    "causalpy/data/nhefs.csv": {
+      "mode": "100644",
+      "git_oid": "8f0614c1c1419386ba69870a59dc6af7e7bcdda2",
+      "bytes": 117834
+    },
+    "causalpy/data/schoolingReturns.csv": {
+      "mode": "100644",
+      "git_oid": "43aea2eb9eba907c65a7a992c392ebb2c3aae457",
+      "bytes": 344780
+    },
+    "causalpy/data/simulate_data.py": {
+      "mode": "100644",
+      "git_oid": "2dc11b60de51affde105a3cc8725abbf95484c58",
+      "bytes": 33457
+    },
+    "causalpy/data/zipcodes_data.csv": {
+      "mode": "100644",
+      "git_oid": "99e9ac5f12de0123841d24c835bb869c4d8b3920",
+      "bytes": 2662593
+    },
+    "causalpy/date_utils.py": {
+      "mode": "100644",
+      "git_oid": "276dcc0215394ce370dfe079ab13bda651eb7922",
+      "bytes": 4726
+    },
+    "causalpy/experiments/__init__.py": {
+      "mode": "100644",
+      "git_oid": "0e7d2d11395863fc254c685f061bda26144383cd",
+      "bytes": 1723
+    },
+    "causalpy/experiments/_panel_counterfactual.py": {
+      "mode": "100644",
+      "git_oid": "973b87adaaab8a3e1764617d3537c1ac53bf1616",
+      "bytes": 28464
+    },
+    "causalpy/experiments/_results.py": {
+      "mode": "100644",
+      "git_oid": "606c42f905330416f8a13576c1db125fcb18bbfc",
+      "bytes": 5177
+    },
+    "causalpy/experiments/augmented_synthetic_control.py": {
+      "mode": "100644",
+      "git_oid": "2dfe24a76b9967a73544a212df231d5e6e8209e9",
+      "bytes": 9831
+    },
+    "causalpy/experiments/base.py": {
+      "mode": "100644",
+      "git_oid": "b6072172f10bc6ae9c5174a7196b161921983b0f",
+      "bytes": 34104
+    },
+    "causalpy/experiments/diff_in_diff.py": {
+      "mode": "100644",
+      "git_oid": "289ea96c7e460be2f84ef50448edefa054fb1e98",
+      "bytes": 32529
+    },
+    "causalpy/experiments/instrumental_variable.py": {
+      "mode": "100644",
+      "git_oid": "d0a3ae4c1865194f6559e42930bd6f021745fb58",
+      "bytes": 19242
+    },
+    "causalpy/experiments/interactive_fixed_effects.py": {
+      "mode": "100644",
+      "git_oid": "5aa0ba95d2e826fc9981b16f7087d30fba819ea5",
+      "bytes": 33958
+    },
+    "causalpy/experiments/interrupted_time_series.py": {
+      "mode": "100644",
+      "git_oid": "aef142a9ec70f1f76586b68076bd99989fa0e3f2",
+      "bytes": 60103
+    },
+    "causalpy/experiments/inverse_propensity_weighting.py": {
+      "mode": "100644",
+      "git_oid": "63a2dc316cd459d7536512d8a5570f3d8d00cb5d",
+      "bytes": 37027
+    },
+    "causalpy/experiments/model_adapter.py": {
+      "mode": "100644",
+      "git_oid": "f9ae8e8199f1be6dd1696f493af066eda6db0175",
+      "bytes": 49116
+    },
+    "causalpy/experiments/panel_regression.py": {
+      "mode": "100644",
+      "git_oid": "1f99995526f1c0a84cd02b4a1f8375d54ff39ccf",
+      "bytes": 50248
+    },
+    "causalpy/experiments/piecewise_its.py": {
+      "mode": "100644",
+      "git_oid": "4e2a71b8f315039b4832075e83aa98dbb25d964f",
+      "bytes": 36826
+    },
+    "causalpy/experiments/prepostnegd.py": {
+      "mode": "100644",
+      "git_oid": "23a3045f9a3ea0cdac7498040d30838285e9e50a",
+      "bytes": 25670
+    },
+    "causalpy/experiments/regression_discontinuity.py": {
+      "mode": "100644",
+      "git_oid": "aafaf53b17eb443b1477d32da09543dda7981b12",
+      "bytes": 28488
+    },
+    "causalpy/experiments/regression_kink.py": {
+      "mode": "100644",
+      "git_oid": "24b22dc439b6b014ebc0b5666afc183ea1c08986",
+      "bytes": 22564
+    },
+    "causalpy/experiments/staggered_did.py": {
+      "mode": "100644",
+      "git_oid": "47bf0ecb7dd50474fa2f28fab481438516023147",
+      "bytes": 82391
+    },
+    "causalpy/experiments/synthetic_control.py": {
+      "mode": "100644",
+      "git_oid": "f3d1ab3f150407c6135b666ddb5750ec4ebdbe36",
+      "bytes": 33181
+    },
+    "causalpy/experiments/synthetic_difference_in_differences.py": {
+      "mode": "100644",
+      "git_oid": "32560959912cc2ab84b85b4fc991d881f3e2f890",
+      "bytes": 42470
+    },
+    "causalpy/experiments/up_down_geolift.py": {
+      "mode": "100644",
+      "git_oid": "2f5aadcdfa037e4d504b157fa7f008f189ec95dd",
+      "bytes": 18832
+    },
+    "causalpy/formula_utils.py": {
+      "mode": "100644",
+      "git_oid": "bde996d788677d56043e47083d20917a711b6fff",
+      "bytes": 6870
+    },
+    "causalpy/input_data.py": {
+      "mode": "100644",
+      "git_oid": "8ae9ce6d11296e5764603289f3d767c657e2b079",
+      "bytes": 8752
+    },
+    "causalpy/maketables_adapters.py": {
+      "mode": "100644",
+      "git_oid": "ad2cc05ba3da30e5b89c5b0aeb2da3f2f9a7327f",
+      "bytes": 13302
+    },
+    "causalpy/pipeline.py": {
+      "mode": "100644",
+      "git_oid": "bc0bb499e293f07192638987a5d41b88d20873ab",
+      "bytes": 6900
+    },
+    "causalpy/plot_utils.py": {
+      "mode": "100644",
+      "git_oid": "862dc25024d9235a23de90abc2f64907958b3813",
+      "bytes": 20864
+    },
+    "causalpy/pymc_forecast_models.py": {
+      "mode": "100644",
+      "git_oid": "876747fd2ba4cdddd26d702683b95d36c612a028",
+      "bytes": 20964
+    },
+    "causalpy/pymc_models.py": {
+      "mode": "100644",
+      "git_oid": "750dfcf95bff13814c3c7e7ab89f750984ddce9e",
+      "bytes": 155252
+    },
+    "causalpy/reporting.py": {
+      "mode": "100644",
+      "git_oid": "6996b0c30c703e554afd6ffb454acc51b3816eac",
+      "bytes": 75001
+    },
+    "causalpy/skills/README.md": {
+      "mode": "100644",
+      "git_oid": "c8e9b78b6fea0f67ced56084c29384005071ba53",
+      "bytes": 1281
+    },
+    "causalpy/skills/__init__.py": {
+      "mode": "100644",
+      "git_oid": "bd2e2667c325b0f01b94b08f6398c84fd46fac66",
+      "bytes": 894
+    },
+    "causalpy/skills/causal-detective/SKILL.md": {
+      "mode": "100644",
+      "git_oid": "4b46e58fd63852674440fab2a5fbfbd695b89349",
+      "bytes": 3235
+    },
+    "causalpy/skills/causal-detective/reference/counterfactual_analysis.md": {
+      "mode": "100644",
+      "git_oid": "9788d67f0723bbc4ddf80d1a724c0a67a5e09c33",
+      "bytes": 1903
+    },
+    "causalpy/skills/causal-detective/reference/falsification_tests.md": {
+      "mode": "100644",
+      "git_oid": "057e1ba7a2780cc8c3858a1de02afd89343f1b98",
+      "bytes": 3328
+    },
+    "causalpy/skills/causal-detective/reference/threat_catalog.md": {
+      "mode": "100644",
+      "git_oid": "1cb49a70681f3b20c69108019c7a2981f146e792",
+      "bytes": 3406
+    },
+    "causalpy/skills/choosing-causalpy-methods/SKILL.md": {
+      "mode": "100644",
+      "git_oid": "4e4662fcd2bea7b8de3213c4e192e2aa20fe7e28",
+      "bytes": 5542
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/decision_tree.md": {
+      "mode": "100644",
+      "git_oid": "b8144326133b28a37764554aee5f9d6c06adb7cb",
+      "bytes": 7678
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/disambiguation/did_vs_staggered_vs_panel.md": {
+      "mode": "100644",
+      "git_oid": "05e8f26dfda432b794c66dec8b4ab06a1019e823",
+      "bytes": 1598
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/disambiguation/ipw_vs_iv_vs_panel.md": {
+      "mode": "100644",
+      "git_oid": "8c9bb010fde0922b357c3b445e8bd5e68cbee094",
+      "bytes": 1417
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/disambiguation/its_vs_piecewise_its.md": {
+      "mode": "100644",
+      "git_oid": "9363ad91672d5ac438547cd2aa27552ef8ee42b3",
+      "bytes": 1222
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/disambiguation/its_vs_sc_vs_did.md": {
+      "mode": "100644",
+      "git_oid": "2e503f99dabc8eb5ae2ad9b74e6bb44e1359de37",
+      "bytes": 1729
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/disambiguation/prepostnegd_vs_did.md": {
+      "mode": "100644",
+      "git_oid": "5cf4373599a40445da1da0905e011bf364457198",
+      "bytes": 1040
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/disambiguation/sc_vs_sdid.md": {
+      "mode": "100644",
+      "git_oid": "6d0cfdf706f6abf2224c27c2fd879873f4cafa83",
+      "bytes": 1102
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/experiment_decision_guide.md": {
+      "mode": "100644",
+      "git_oid": "1cd2ad3e0eda580494c743b21a49da881eb5f6ea",
+      "bytes": 5702
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/method_capability_matrix.md": {
+      "mode": "100644",
+      "git_oid": "cce42c7e828d8baecc281258622ed2e3d44d2442",
+      "bytes": 3474
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/not_in_causalpy.md": {
+      "mode": "100644",
+      "git_oid": "72ec54b9e1ba16078f901e5dc39838d025d0dadc",
+      "bytes": 4194
+    },
+    "causalpy/skills/choosing-causalpy-methods/reference/triggers.md": {
+      "mode": "100644",
+      "git_oid": "4c06852e0b3aa8b5f283d0c24be37fef6f60e033",
+      "bytes": 1177
+    },
+    "causalpy/skills/example-datasets/SKILL.md": {
+      "mode": "100644",
+      "git_oid": "2c5a2765113123d5a2a136aceaa11612a2c35fca",
+      "bytes": 2348
+    },
+    "causalpy/skills/running-causalpy-experiments/SKILL.md": {
+      "mode": "100644",
+      "git_oid": "edb84076a7239669ddd593c1a3bf572080ff909a",
+      "bytes": 5156
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/custom_priors.md": {
+      "mode": "100644",
+      "git_oid": "be59ed072e0da28eada0283fbd50e6669bc96649",
+      "bytes": 5980
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/diff_in_diff.md": {
+      "mode": "100644",
+      "git_oid": "79acdf768f6a5df1bcd1984041efd6813ea23a90",
+      "bytes": 1921
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/instrumental_variable.md": {
+      "mode": "100644",
+      "git_oid": "35adab1bc0c3dac3f2a37a15450ed87f1a53d8b6",
+      "bytes": 2274
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/interrupted_time_series.md": {
+      "mode": "100644",
+      "git_oid": "57fd824373fe2dff6d18c3f6c320678442ddc44f",
+      "bytes": 1827
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/inverse_propensity_weighting.md": {
+      "mode": "100644",
+      "git_oid": "d45516df1f26c8ce28383caaf73bb3ff35eded32",
+      "bytes": 1715
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/panel_regression.md": {
+      "mode": "100644",
+      "git_oid": "00c23262cc8b21e13255d741cdbcb4f7b35fb972",
+      "bytes": 2241
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/piecewise_its.md": {
+      "mode": "100644",
+      "git_oid": "004b8389e7066c7545713e4e57fa02923021ecd9",
+      "bytes": 1709
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/prepostnegd.md": {
+      "mode": "100644",
+      "git_oid": "04ef335486e126489089f5dcd789ecb1f0b17d8c",
+      "bytes": 1515
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/regression_discontinuity.md": {
+      "mode": "100644",
+      "git_oid": "54f146ae22a43f39676770b08fdb8f4681f6bca4",
+      "bytes": 1928
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/regression_kink.md": {
+      "mode": "100644",
+      "git_oid": "136012d77ae6c3ed478a37f3ae550d67039cabc4",
+      "bytes": 2061
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/staggered_did.md": {
+      "mode": "100644",
+      "git_oid": "b67122afb6f8a84621233e4196ff0e2aef54e13b",
+      "bytes": 2530
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/synthetic_control.md": {
+      "mode": "100644",
+      "git_oid": "7c15a92d8af8f270cd9a63aca7b6debe8d572f6c",
+      "bytes": 2244
+    },
+    "causalpy/skills/running-causalpy-experiments/reference/synthetic_difference_in_differences.md": {
+      "mode": "100644",
+      "git_oid": "5ce9fc185b429a965c682faf7a02bdc67719a4c8",
+      "bytes": 1712
+    },
+    "causalpy/skills/running-placebo-analysis/SKILL.md": {
+      "mode": "100644",
+      "git_oid": "a817cc9cb3e598368e029ba45eb0f2c591a90a14",
+      "bytes": 1767
+    },
+    "causalpy/skills/running-placebo-analysis/reference/placebo_in_time.md": {
+      "mode": "100644",
+      "git_oid": "69d532995d745c1fa3893779479fd7490c3b6aaf",
+      "bytes": 6859
+    },
+    "causalpy/skl_models.py": {
+      "mode": "100644",
+      "git_oid": "efcba55e90d4d809bbd8dc4f8d93cbfc08add19e",
+      "bytes": 3829
+    },
+    "causalpy/steps/__init__.py": {
+      "mode": "100644",
+      "git_oid": "61d2a4e12d0e336527042667f14d5d6583435a06",
+      "bytes": 967
+    },
+    "causalpy/steps/estimate_effect.py": {
+      "mode": "100644",
+      "git_oid": "d9ea89634d21eef3b9391d0aae33833ddd816aca",
+      "bytes": 5635
+    },
+    "causalpy/steps/report.py": {
+      "mode": "100644",
+      "git_oid": "d929145155c9727532ee064040872750b181ef30",
+      "bytes": 7604
+    },
+    "causalpy/steps/sensitivity.py": {
+      "mode": "100644",
+      "git_oid": "5a65bc92fdf9d359859bed11eeb935cd6171ff5d",
+      "bytes": 7396
+    },
+    "causalpy/templates/report.html": {
+      "mode": "100644",
+      "git_oid": "2955de564540814c0e44dd999f9047ffc1bbc898",
+      "bytes": 4731
+    },
+    "causalpy/tests/__init__.py": {
+      "mode": "100644",
+      "git_oid": "5dcab751f47e67fb487dd728c386e9a5d3f503b0",
+      "bytes": 615
+    },
+    "causalpy/tests/conftest.py": {
+      "mode": "100644",
+      "git_oid": "67917c2bcc05f3257a3f1420f17e73c0d17d7d60",
+      "bytes": 6276
+    },
+    "causalpy/tests/doctest_sampling.py": {
+      "mode": "100644",
+      "git_oid": "ab16698696e6100453ded597c4ba66c5c6c30407",
+      "bytes": 7064
+    },
+    "causalpy/tests/known_truth_panels.py": {
+      "mode": "100644",
+      "git_oid": "cfb3f9b6e329c53a778323820e69ce46b353c24f",
+      "bytes": 4646
+    },
+    "causalpy/tests/known_truth_report.py": {
+      "mode": "100644",
+      "git_oid": "6ae5e5fa4fb10b53fcc5de0d1df63fc6fc6c2330",
+      "bytes": 4195
+    },
+    "causalpy/tests/test_arviz_compat_hdi.py": {
+      "mode": "100644",
+      "git_oid": "cacb52de40b857f86d6a4ab05cca18608fb74ef4",
+      "bytes": 9502
+    },
+    "causalpy/tests/test_augmented_synthetic_control.py": {
+      "mode": "100644",
+      "git_oid": "e8afbf3a20b0373153e026d1b2a2b0a930008b22",
+      "bytes": 12856
+    },
+    "causalpy/tests/test_auto_scale_sigma.py": {
+      "mode": "100644",
+      "git_oid": "649cc099f996d4bbbef3adad98197238b122bf6e",
+      "bytes": 27336
+    },
+    "causalpy/tests/test_base_experiment_abc.py": {
+      "mode": "100644",
+      "git_oid": "1b3ed737214829207b5f957ec130e85b03201e43",
+      "bytes": 1082
+    },
+    "causalpy/tests/test_basis_expansion_prior_scale.py": {
+      "mode": "100644",
+      "git_oid": "5a3c397ad3d1e25a4a5c9ff8c3603fe7f2256626",
+      "bytes": 20053
+    },
+    "causalpy/tests/test_bayesian_sc_comparison_note.py": {
+      "mode": "100644",
+      "git_oid": "58a47e3043bc546c6a73c1a07e462a8367f42d52",
+      "bytes": 3058
+    },
+    "causalpy/tests/test_check_architecture_inventory.py": {
+      "mode": "100644",
+      "git_oid": "e098c9f65138640d92b86294cf73f649fdec528c",
+      "bytes": 6425
+    },
+    "causalpy/tests/test_check_public_exports.py": {
+      "mode": "100644",
+      "git_oid": "35b80569b3f0a7e3eb1b43eb0acf90d348abcbcf",
+      "bytes": 5610
+    },
+    "causalpy/tests/test_coefficient_contract.py": {
+      "mode": "100644",
+      "git_oid": "f3f1adab1e47b9f9c9e319c077c9a91952ffbaf6",
+      "bytes": 9476
+    },
+    "causalpy/tests/test_cross_cutting_checks.py": {
+      "mode": "100644",
+      "git_oid": "32fa2fae58d4b00ea9e073a1cf0936417cd48cc4",
+      "bytes": 29424
+    },
+    "causalpy/tests/test_custom_exceptions.py": {
+      "mode": "100644",
+      "git_oid": "533d41e0b5434c81f362fe73b0b60ad3f6be0a4d",
+      "bytes": 1138
+    },
+    "causalpy/tests/test_data_loading.py": {
+      "mode": "100644",
+      "git_oid": "e917c840421c5c200466736cd1380940b2adc118",
+      "bytes": 1919
+    },
+    "causalpy/tests/test_dataframe_backends.py": {
+      "mode": "100644",
+      "git_oid": "394d4dc67d3f9405cc9c55a44362c63100fd2d56",
+      "bytes": 13383
+    },
+    "causalpy/tests/test_datatree_contracts.py": {
+      "mode": "100644",
+      "git_oid": "892e7e242e02f4945c72519a5e4492df5f3e3ce3",
+      "bytes": 1580
+    },
+    "causalpy/tests/test_date_utils.py": {
+      "mode": "100644",
+      "git_oid": "ade517805057107a36b8ca74b4409624adb627fe",
+      "bytes": 6518
+    },
+    "causalpy/tests/test_default_models.py": {
+      "mode": "100644",
+      "git_oid": "3b00f32988e1e67f443ab8b4c9ee2751a2c45120",
+      "bytes": 7601
+    },
+    "causalpy/tests/test_deprecated_design_aliases.py": {
+      "mode": "100644",
+      "git_oid": "c0ef74ef03b4d27c753058874878cd1d94e50004",
+      "bytes": 9813
+    },
+    "causalpy/tests/test_did_covariate_not_four_mean.py": {
+      "mode": "100644",
+      "git_oid": "c1e024085d7f91a3f5d14d09f3fdb77b9995c8b4",
+      "bytes": 2679
+    },
+    "causalpy/tests/test_did_saturated_four_mean.py": {
+      "mode": "100644",
+      "git_oid": "17b8b7d835387cb5dce68d44019b7d7a13dbd585",
+      "bytes": 2136
+    },
+    "causalpy/tests/test_doctest_sampling.py": {
+      "mode": "100644",
+      "git_oid": "2e663bbffb3e6f28dc5992f83188ee379ab71b2c",
+      "bytes": 18061
+    },
+    "causalpy/tests/test_experiment_lifecycle.py": {
+      "mode": "100644",
+      "git_oid": "8c0d3a0f58df34aa7379432397d6865ca618e543",
+      "bytes": 13937
+    },
+    "causalpy/tests/test_formula_datetime_encoding.py": {
+      "mode": "100644",
+      "git_oid": "383bfbd75358a2e581365a7c28fd1b7d55fc59d8",
+      "bytes": 4713
+    },
+    "causalpy/tests/test_generate_gallery.py": {
+      "mode": "100644",
+      "git_oid": "378416a5b46f093fc87a7868d2e850fe2c5910c5",
+      "bytes": 2538
+    },
+    "causalpy/tests/test_generate_plots.py": {
+      "mode": "100644",
+      "git_oid": "50a1906245b18fcf1aae701e25c8258c0d225899",
+      "bytes": 2837
+    },
+    "causalpy/tests/test_generate_report.py": {
+      "mode": "100644",
+      "git_oid": "188f2ccab6445b59b144f257e0e9ba058e835d66",
+      "bytes": 10736
+    },
+    "causalpy/tests/test_hdi_prob_defaults.py": {
+      "mode": "100644",
+      "git_oid": "eeab38b12d46ea3e19d96ee4d1d1dce14ef4d070",
+      "bytes": 5742
+    },
+    "causalpy/tests/test_hdi_prob_wiring.py": {
+      "mode": "100644",
+      "git_oid": "db1df17b549ca7be4502179694f8aa8a45e8b0c1",
+      "bytes": 22422
+    },
+    "causalpy/tests/test_input_data.py": {
+      "mode": "100644",
+      "git_oid": "286f2bdfc0760b822887ce136bdc9980e6066a30",
+      "bytes": 4021
+    },
+    "causalpy/tests/test_input_validation.py": {
+      "mode": "100644",
+      "git_oid": "98e9716c317a2f98c7eeac84c5a40c4b54914071",
+      "bytes": 51554
+    },
+    "causalpy/tests/test_instrumental_variable.py": {
+      "mode": "100644",
+      "git_oid": "cb8c6565ffaffb343149816d42c42b1ef1ff53b6",
+      "bytes": 32120
+    },
+    "causalpy/tests/test_integration_its_new_timeseries.py": {
+      "mode": "100644",
+      "git_oid": "6092ba555881ff11dfc78d558e62e3ca8eed8b0b",
+      "bytes": 13944
+    },
+    "causalpy/tests/test_integration_pymc_examples.py": {
+      "mode": "100644",
+      "git_oid": "b5af6561093b01c278de2a9cc309f63ce7808367",
+      "bytes": 70490
+    },
+    "causalpy/tests/test_integration_skl_examples.py": {
+      "mode": "100644",
+      "git_oid": "36e4c5ccb80e4851bd7dbd67088ff3606b6b2ad4",
+      "bytes": 13416
+    },
+    "causalpy/tests/test_interactive_fixed_effects.py": {
+      "mode": "100644",
+      "git_oid": "86e14daa09b4e1a79054348eae47fff8d4d32f1b",
+      "bytes": 26728
+    },
+    "causalpy/tests/test_ipw_doubly_robust_intercept.py": {
+      "mode": "100644",
+      "git_oid": "768cc01097903b8f88de71930a60bdeeacebe5d1",
+      "bytes": 3269
+    },
+    "causalpy/tests/test_ipw_extreme_ps.py": {
+      "mode": "100644",
+      "git_oid": "88bbbf7796f1615f5f7cba3addcf9a4df54da6a0",
+      "bytes": 15278
+    },
+    "causalpy/tests/test_ipw_get_ate.py": {
+      "mode": "100644",
+      "git_oid": "206db881f2f85f4699f869a16609e03d0def5d39",
+      "bytes": 13819
+    },
+    "causalpy/tests/test_ipw_index_alignment.py": {
+      "mode": "100644",
+      "git_oid": "712ef55f7245d54e1f7e1a02ae67b9869e93c503",
+      "bytes": 8429
+    },
+    "causalpy/tests/test_ipw_overlap_identity.py": {
+      "mode": "100644",
+      "git_oid": "cb75922e82ef2f26e1cb2eccaf973e2237716bf2",
+      "bytes": 2702
+    },
+    "causalpy/tests/test_its_effect_summary.py": {
+      "mode": "100644",
+      "git_oid": "3478a8814000c0c121d9ad6c09bf028585f85e87",
+      "bytes": 37287
+    },
+    "causalpy/tests/test_known_truth_panels.py": {
+      "mode": "100644",
+      "git_oid": "0e337aa2fe41dc3de39fbc09780d9ee3147e2163",
+      "bytes": 8119
+    },
+    "causalpy/tests/test_known_truth_report.py": {
+      "mode": "100644",
+      "git_oid": "5912f379d0f8984b4fd5c14927cbbd26c97ff271",
+      "bytes": 2364
+    },
+    "causalpy/tests/test_maketables_plugin.py": {
+      "mode": "100644",
+      "git_oid": "b80c79813a873fef5e414e3dc0a4d503d69b517f",
+      "bytes": 30522
+    },
+    "causalpy/tests/test_method_specific_checks.py": {
+      "mode": "100644",
+      "git_oid": "519e2634cd6cfb90d5a252d59c81304e22595aee",
+      "bytes": 45303
+    },
+    "causalpy/tests/test_migration_baseline_harness.py": {
+      "mode": "100644",
+      "git_oid": "dda40f276a72639b23d2154df3a8783c9532ac38",
+      "bytes": 49931
+    },
+    "causalpy/tests/test_misc.py": {
+      "mode": "100644",
+      "git_oid": "17b325e3121b0755f1016519fd8fc3bc95bbf65b",
+      "bytes": 1738
+    },
+    "causalpy/tests/test_model_adapter.py": {
+      "mode": "100644",
+      "git_oid": "ed23f710ee0d7146d26735af889b0b9afca6a221",
+      "bytes": 22809
+    },
+    "causalpy/tests/test_model_adapter_normalization.py": {
+      "mode": "100644",
+      "git_oid": "b58dc7b059f6318786916fb6494a5e2d423c7405",
+      "bytes": 5137
+    },
+    "causalpy/tests/test_model_experiment_compatability.py": {
+      "mode": "100644",
+      "git_oid": "74d90c03772636eadd8f1700286261823f576359",
+      "bytes": 3140
+    },
+    "causalpy/tests/test_notebook_runner.py": {
+      "mode": "100644",
+      "git_oid": "eb57aa4ce7a675f3a7d4544af53eeffb1ec85223",
+      "bytes": 22850
+    },
+    "causalpy/tests/test_notebook_validation.py": {
+      "mode": "100644",
+      "git_oid": "b1efd74a181d0f2b389359da29226b6216915ff7",
+      "bytes": 9337
+    },
+    "causalpy/tests/test_operating_characteristics.py": {
+      "mode": "100644",
+      "git_oid": "94b74a942fe658d4cc5760306811dbf37ca3ffba",
+      "bytes": 14230
+    },
+    "causalpy/tests/test_outcome_falsification.py": {
+      "mode": "100644",
+      "git_oid": "c457a0bc8b8b1a1787718e084de0bbd36ef8fdc7",
+      "bytes": 19656
+    },
+    "causalpy/tests/test_pandas_compat.py": {
+      "mode": "100644",
+      "git_oid": "1b0e4d7b44c3cbf68d479fc3af5ed00a38e0fb18",
+      "bytes": 18374
+    },
+    "causalpy/tests/test_panel_counterfactual.py": {
+      "mode": "100644",
+      "git_oid": "ea9459510cca6bd3b77619ac2e37d22c0007f250",
+      "bytes": 21435
+    },
+    "causalpy/tests/test_panel_regression.py": {
+      "mode": "100644",
+      "git_oid": "abff21792816fca43c6989809256ddddb9e18e5f",
+      "bytes": 53165
+    },
+    "causalpy/tests/test_parameter_recovery.py": {
+      "mode": "100644",
+      "git_oid": "714a77ffe249b30e52b8a12cb38ad3bfc375af4c",
+      "bytes": 31302
+    },
+    "causalpy/tests/test_piecewise_its.py": {
+      "mode": "100644",
+      "git_oid": "e7f030e8c6c899c6291686658efee9825434ba2a",
+      "bytes": 59709
+    },
+    "causalpy/tests/test_pipeline.py": {
+      "mode": "100644",
+      "git_oid": "80ee847753ce29b182f94601dd0130771896f156",
+      "bytes": 11713
+    },
+    "causalpy/tests/test_placebo_in_time.py": {
+      "mode": "100644",
+      "git_oid": "f4565e34530c19fd0182b334c0378be6d3a2ad14",
+      "bytes": 127600
+    },
+    "causalpy/tests/test_plot_show_parameter.py": {
+      "mode": "100644",
+      "git_oid": "265c952d11c591df6a81988c2e799f1a81c53880",
+      "bytes": 15980
+    },
+    "causalpy/tests/test_plot_utils.py": {
+      "mode": "100644",
+      "git_oid": "3b21dd41f3891d1090ab48bfe973c1135c59f94a",
+      "bytes": 29546
+    },
+    "causalpy/tests/test_posterior_plot_contracts.py": {
+      "mode": "100644",
+      "git_oid": "8a99e93518c98318d211e9d4c04e62ad7a7b3a5f",
+      "bytes": 2413
+    },
+    "causalpy/tests/test_prediction_contract.py": {
+      "mode": "100644",
+      "git_oid": "9fb7fddfbb16c081d657ee32cf4b8e72b7b5ad03",
+      "bytes": 10082
+    },
+    "causalpy/tests/test_prior_phase.py": {
+      "mode": "100644",
+      "git_oid": "a8a7e08032aa493f5025c807d722113ec93e8e16",
+      "bytes": 22270
+    },
+    "causalpy/tests/test_public_signatures.py": {
+      "mode": "100644",
+      "git_oid": "e78750647fd7951fa744d7ad670dcd23f9e54642",
+      "bytes": 31260
+    },
+    "causalpy/tests/test_pymc_forecast_adapter.py": {
+      "mode": "100644",
+      "git_oid": "7cc2e9fcd5d9992d1aa6dd3a3d29176dd32a8ebe",
+      "bytes": 38628
+    },
+    "causalpy/tests/test_pymc_forecast_damped_trend.py": {
+      "mode": "100644",
+      "git_oid": "239b8dae6e0c65cdb862609f9b0052ad035b0f8a",
+      "bytes": 7938
+    },
+    "causalpy/tests/test_pymc_forecast_dependency.py": {
+      "mode": "100644",
+      "git_oid": "0c0fda8efca54e04ac83ad9babee4f3841c500bc",
+      "bytes": 4078
+    },
+    "causalpy/tests/test_pymc_models.py": {
+      "mode": "100644",
+      "git_oid": "6ce0e5a5e2440da7250e6c5efa8502fbbdfee4f2",
+      "bytes": 57880
+    },
+    "causalpy/tests/test_pymc_models_compat.py": {
+      "mode": "100644",
+      "git_oid": "fddc774e8db8c5ce2520c8f159c27e5667f94c2c",
+      "bytes": 6003
+    },
+    "causalpy/tests/test_rediraffe_redirects.py": {
+      "mode": "100644",
+      "git_oid": "71e8ce23f8decd8cc4c74ffa3ee8e5b9833271c1",
+      "bytes": 1970
+    },
+    "causalpy/tests/test_reporting.py": {
+      "mode": "100644",
+      "git_oid": "c19cf2080f3cc9624572d6596ae7a4c9f69a82f4",
+      "bytes": 139934
+    },
+    "causalpy/tests/test_review_lifecycle.py": {
+      "mode": "100644",
+      "git_oid": "85505fe59a2925e3f4bc3c81965abcac0cbbf1d1",
+      "bytes": 7946
+    },
+    "causalpy/tests/test_review_models.py": {
+      "mode": "100644",
+      "git_oid": "8a985bd2d84f943c0c5c19a622dc3eaf4bc9891b",
+      "bytes": 10874
+    },
+    "causalpy/tests/test_review_prior_plots.py": {
+      "mode": "100644",
+      "git_oid": "0f928e0e46009da4f9bfb1eb4dd6b19d26a5dafe",
+      "bytes": 10382
+    },
+    "causalpy/tests/test_sampling_fixtures.py": {
+      "mode": "100644",
+      "git_oid": "85444cd7852102948ce3e062b0cf285c3fa2b0ed",
+      "bytes": 5639
+    },
+    "causalpy/tests/test_score_contract.py": {
+      "mode": "100644",
+      "git_oid": "0dbecce63382b53774caa9c7a171c345099339c0",
+      "bytes": 3640
+    },
+    "causalpy/tests/test_sdid_helpers.py": {
+      "mode": "100644",
+      "git_oid": "cbf7291e2fd91add7ed08adeaefa474a5b4ea36d",
+      "bytes": 32786
+    },
+    "causalpy/tests/test_sensitivity_container.py": {
+      "mode": "100644",
+      "git_oid": "677a7ea9fcc85e1c6904a4ffe00fe95f2735644d",
+      "bytes": 12856
+    },
+    "causalpy/tests/test_sklearn_clone_fit_intercept.py": {
+      "mode": "100644",
+      "git_oid": "955e7642f7eab35d4abf27143139f5b2811b91fe",
+      "bytes": 1606
+    },
+    "causalpy/tests/test_staggered_did.py": {
+      "mode": "100644",
+      "git_oid": "b936aef489d79caf0a99d89c2d1965bc99c845da",
+      "bytes": 92844
+    },
+    "causalpy/tests/test_step_ramp_timezone.py": {
+      "mode": "100644",
+      "git_oid": "766ee97b9e07f89c31140bdc54bfe7337edcc15c",
+      "bytes": 6791
+    },
+    "causalpy/tests/test_synthetic_data.py": {
+      "mode": "100644",
+      "git_oid": "112d7608ebbefdca3f9a282e0d761dc4db200783",
+      "bytes": 2667
+    },
+    "causalpy/tests/test_three_period_its.py": {
+      "mode": "100644",
+      "git_oid": "f433b1ca916969120b6120bb2e234a7ccb60c1ee",
+      "bytes": 48593
+    },
+    "causalpy/tests/test_time_column.py": {
+      "mode": "100644",
+      "git_oid": "bc191f4425a6082e633f6a939af4191eb3d951ad",
+      "bytes": 19689
+    },
+    "causalpy/tests/test_timeseries_model_coverage.py": {
+      "mode": "100644",
+      "git_oid": "c7aae57cdc1c72ccf30a733b9400f7e0c84185d8",
+      "bytes": 50885
+    },
+    "causalpy/tests/test_up_down_geolift.py": {
+      "mode": "100644",
+      "git_oid": "10a1a6c3f2f0a0bbbfa830c2d03e5a9ca9cee345",
+      "bytes": 15042
+    },
+    "causalpy/tests/test_utils.py": {
+      "mode": "100644",
+      "git_oid": "019f41c8db3c79a2895fc3d3b02658ba14e7aba6",
+      "bytes": 18587
+    },
+    "causalpy/tests/test_validate_docstring_lists.py": {
+      "mode": "100644",
+      "git_oid": "4bb18f90ae09af655b8cfeafdddee470dd83f672",
+      "bytes": 6172
+    },
+    "causalpy/tests/test_variable_selection_priors.py": {
+      "mode": "100644",
+      "git_oid": "3846449503dc64bd345a8cfd7808fc320f6975d2",
+      "bytes": 11059
+    },
+    "causalpy/tests/test_weighted_proportion.py": {
+      "mode": "100644",
+      "git_oid": "81b8d660ce337f8e1996466cdc670232b3ddfea9",
+      "bytes": 3121
+    },
+    "causalpy/transforms.py": {
+      "mode": "100644",
+      "git_oid": "dfda3ca2198605a6e45ae600bc0d1c40aada4fbe",
+      "bytes": 12246
+    },
+    "causalpy/utils.py": {
+      "mode": "100644",
+      "git_oid": "575de0c1b4fa9d5793025f21e31c50e1a7b70714",
+      "bytes": 18991
+    },
+    "causalpy/variable_selection_priors.py": {
+      "mode": "100644",
+      "git_oid": "5d3583b793c433d35a4b281b415620e6c95badf5",
+      "bytes": 24742
+    },
+    "causalpy/version.py": {
+      "mode": "100644",
+      "git_oid": "eed8f4f9512ce8a759bf439258307bf53c52509b",
+      "bytes": 665
+    },
+    "codecov.yml": {
+      "mode": "100644",
+      "git_oid": "f8d29b9acb25751870b439a4d1f5803596886f7a",
+      "bytes": 709
+    },
+    "docs/dev/its_pymc copy.ipynb": {
+      "mode": "100644",
+      "git_oid": "37894a63e3815a5fc09f24d4b9237387490f2208",
+      "bytes": 1304547
+    },
+    "docs/make.bat": {
+      "mode": "100644",
+      "git_oid": "83cf06c1de15e06b524ee6893eee159f699df9d1",
+      "bytes": 805
+    },
+    "docs/requirements.txt": {
+      "mode": "100644",
+      "git_oid": "9f2258d3559a66d15ff93eb8b76da4a440dd9528",
+      "bytes": 249
+    },
+    "docs/source/.codespell/codespell-whitelist.txt": {
+      "mode": "100644",
+      "git_oid": "e3d7827168a1ac6b0d816aeef69a2107676530b9",
+      "bytes": 53
+    },
+    "docs/source/.codespell/notebook_to_markdown.py": {
+      "mode": "100644",
+      "git_oid": "1f347df95adac87186f21031e24007225f4eb4a2",
+      "bytes": 2675
+    },
+    "docs/source/.codespell/test_data/test_notebook.ipynb": {
+      "mode": "100644",
+      "git_oid": "6ad8f5277a638a2546b1c86682d4964f5a876379",
+      "bytes": 442
+    },
+    "docs/source/.codespell/test_notebook_to_markdown.py": {
+      "mode": "100644",
+      "git_oid": "38fc997769dbd23e0e81de02f449017bc4af7941",
+      "bytes": 1621
+    },
+    "docs/source/_static/JOINT_DAG.png": {
+      "mode": "100644",
+      "git_oid": "4ce8f04eafc7c550c7a3c5d537a8037d3c786b0a",
+      "bytes": 124902
+    },
+    "docs/source/_static/causal-inference-project-brief.txt": {
+      "mode": "100644",
+      "git_oid": "6e615b74f8e3f23568aa2fafff0822e86ec48860",
+      "bytes": 832
+    },
+    "docs/source/_static/classes.svg": {
+      "mode": "100644",
+      "git_oid": "b3f133937b4a7bc3a63ec882443a17e5c66c0656",
+      "bytes": 1070431
+    },
+    "docs/source/_static/contributors.json": {
+      "mode": "100644",
+      "git_oid": "78a86b021595407f1bb38d07c695ec1a7b63d728",
+      "bytes": 766
+    },
+    "docs/source/_static/contributors.svg": {
+      "mode": "100644",
+      "git_oid": "c79154dac1a31dff7eb1cf026fdaf397c1d9a630",
+      "bytes": 546890
+    },
+    "docs/source/_static/custom.css": {
+      "mode": "100644",
+      "git_oid": "e7f4d46885e4a5d97eb6424fb44a56a31a95023b",
+      "bytes": 4342
+    },
+    "docs/source/_static/favicon_logo.png": {
+      "mode": "100644",
+      "git_oid": "a059b02a18f37717120683b59505c0861ffb3213",
+      "bytes": 50498
+    },
+    "docs/source/_static/flat_logo.png": {
+      "mode": "100644",
+      "git_oid": "534aa025dbe4bb549cb563dbf72e7a637a49d3f5",
+      "bytes": 142999
+    },
+    "docs/source/_static/flat_logo_darkmode.png": {
+      "mode": "100644",
+      "git_oid": "106bc5e94642fc0e52ea8800d00a717ccc8168e3",
+      "bytes": 89659
+    },
+    "docs/source/_static/forwards_backwards.png": {
+      "mode": "100644",
+      "git_oid": "dbaaf71eba40fae6bde544bd35804f1c8cafce4e",
+      "bytes": 151502
+    },
+    "docs/source/_static/gallery.css": {
+      "mode": "100644",
+      "git_oid": "28f6fb56a0c7cc63b2cc964db2a375e22e5f4103",
+      "bytes": 547
+    },
+    "docs/source/_static/iv_reg1.png": {
+      "mode": "100644",
+      "git_oid": "ab43c26e25a014eb4d10d244d7151c6bbd7eb2d1",
+      "bytes": 31410
+    },
+    "docs/source/_static/iv_reg2.png": {
+      "mode": "100644",
+      "git_oid": "ec06145c1d548cbfce65e54b2af869ec91c71f52",
+      "bytes": 44298
+    },
+    "docs/source/_static/logo.png": {
+      "mode": "100644",
+      "git_oid": "a77b14caa50ef982e0a048e811dd64bcd49c2f46",
+      "bytes": 175010
+    },
+    "docs/source/_static/packages.svg": {
+      "mode": "100644",
+      "git_oid": "d55702835e1ea74f90292f977d2b122cbf9abddf",
+      "bytes": 403672
+    },
+    "docs/source/_static/potential_outcomes.png": {
+      "mode": "100644",
+      "git_oid": "f8c9e2f7fc8aa2bbdbccb05367cf71d6738887de",
+      "bytes": 224740
+    },
+    "docs/source/_static/probabilistic_intervention_fix.png": {
+      "mode": "100644",
+      "git_oid": "550b23acb7a0cd9890984d7d823147abccbe2458",
+      "bytes": 190444
+    },
+    "docs/source/_static/pymc-labs-log.png": {
+      "mode": "100644",
+      "git_oid": "d472941750c596a06874637c76b178326f3a213c",
+      "bytes": 68938
+    },
+    "docs/source/_templates/autosummary/base.rst": {
+      "mode": "100644",
+      "git_oid": "5536fa10863f92500ee1d202eac32102dd02471f",
+      "bytes": 102
+    },
+    "docs/source/_templates/autosummary/class.rst": {
+      "mode": "100644",
+      "git_oid": "7333e8dc2af7104c87cf1d0562697bd8764ad519",
+      "bytes": 564
+    },
+    "docs/source/_templates/autosummary/method.rst": {
+      "mode": "100644",
+      "git_oid": "e03319b8d941a2c62cdd5c6cd434348a57c51f72",
+      "bytes": 105
+    },
+    "docs/source/_templates/autosummary/module.rst": {
+      "mode": "100644",
+      "git_oid": "f3e6bc18ea04795b9df94cda380acaf3c00ed65e",
+      "bytes": 1178
+    },
+    "docs/source/_templates/layout.html": {
+      "mode": "100644",
+      "git_oid": "1b3eb55020fefc72310771c305a6bdb5d9c1534c",
+      "bytes": 1002
+    },
+    "docs/source/_templates/navbar-contact-button.html": {
+      "mode": "100644",
+      "git_oid": "368c351b209d846a222ed9b4ebd87abfc2d863d6",
+      "bytes": 354
+    },
+    "docs/source/api/index.md": {
+      "mode": "100644",
+      "git_oid": "b6702ac750b8fb910e7878e006f26af9e616a319",
+      "bytes": 372
+    },
+    "docs/source/conf.py": {
+      "mode": "100644",
+      "git_oid": "4bf4fd54350f90813a88cbaeb7ad4fc5fd12486c",
+      "bytes": 12382
+    },
+    "docs/source/index.md": {
+      "mode": "100644",
+      "git_oid": "67cc22ba17f0d50a32cc7390750745481fd72985",
+      "bytes": 2382
+    },
+    "docs/source/knowledgebase/causal_video_resources.md": {
+      "mode": "100644",
+      "git_oid": "7710de346e01c20b4d20db7314b36a3957d0a0aa",
+      "bytes": 2332
+    },
+    "docs/source/knowledgebase/causal_written_resources.md": {
+      "mode": "100644",
+      "git_oid": "5b09b7a6d59c5303dcff2f04d2ce4d5fd5e6d6e7",
+      "bytes": 1598
+    },
+    "docs/source/knowledgebase/custom_pymc_models.ipynb": {
+      "mode": "100644",
+      "git_oid": "5134a4273550490e19eafc4588fed4c25c0aa4cd",
+      "bytes": 873254
+    },
+    "docs/source/knowledgebase/design_notation.md": {
+      "mode": "100644",
+      "git_oid": "90c8e6d572589fbe5817967df1ae45ef16a3856a",
+      "bytes": 8704
+    },
+    "docs/source/knowledgebase/estimands.md": {
+      "mode": "100644",
+      "git_oid": "ddee24c25b434a4c70d6eca981bceb487682c4c5",
+      "bytes": 13139
+    },
+    "docs/source/knowledgebase/glossary.rst": {
+      "mode": "100644",
+      "git_oid": "b017d1b8e263baf03474fa34a1a67d5f84a5bed4",
+      "bytes": 16397
+    },
+    "docs/source/knowledgebase/index.md": {
+      "mode": "100644",
+      "git_oid": "aaac5fa8bb609459d9493606a41bf3b34c84d0c6",
+      "bytes": 246
+    },
+    "docs/source/knowledgebase/prediction-contract.md": {
+      "mode": "100644",
+      "git_oid": "db351ef9227abe7f14dfcafceb9f3dd60605b540",
+      "bytes": 8797
+    },
+    "docs/source/knowledgebase/quasi_dags.ipynb": {
+      "mode": "100644",
+      "git_oid": "3d69b906834873ac159bfef39fac67c43869e300",
+      "bytes": 941079
+    },
+    "docs/source/knowledgebase/reporting_statistics.md": {
+      "mode": "100644",
+      "git_oid": "e13bf02599efeb61bab81b4a6691ab6b7ea1cf24",
+      "bytes": 17407
+    },
+    "docs/source/knowledgebase/structural_causal_models.ipynb": {
+      "mode": "100644",
+      "git_oid": "fa9cb382c75abfae5920bf30c0fbfa51f1fe4090",
+      "bytes": 2323883
+    },
+    "docs/source/llms.txt": {
+      "mode": "100644",
+      "git_oid": "9dd4427f99cd7566667e2949931c5b82ac77bb17",
+      "bytes": 6035
+    },
+    "docs/source/notebooks/ancova-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "af54e2a9c5a6f8bae083a71db8d8ec244dd5e71d",
+      "bytes": 1145066
+    },
+    "docs/source/notebooks/augmented-synthetic-control-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "56993d927799aee2662aaf76d883599333e2dffa",
+      "bytes": 245840
+    },
+    "docs/source/notebooks/comparing-bayesian-synthetic-control-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "4bd8f77f2bee4e3f66a54dbe3b16b5e4d49b5339",
+      "bytes": 269449
+    },
+    "docs/source/notebooks/difference-in-differences-banks-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "ffb13f1cd9d8f953953bc23be7bd39d09bb8e6d6",
+      "bytes": 1682410
+    },
+    "docs/source/notebooks/difference-in-differences-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "515da0670a4cb3f37233b5219b17c88700d93f0b",
+      "bytes": 207307
+    },
+    "docs/source/notebooks/difference-in-differences-sklearn.ipynb": {
+      "mode": "100644",
+      "git_oid": "96e495bca488007372ddc54db094fdae5fceb6c2",
+      "bytes": 131957
+    },
+    "docs/source/notebooks/gallery.yaml": {
+      "mode": "100644",
+      "git_oid": "bba3e1ca4d99e99dfe56b16fece9c9be32b6337b",
+      "bytes": 10994
+    },
+    "docs/source/notebooks/geolift-single-cell.ipynb": {
+      "mode": "100644",
+      "git_oid": "ee0305edca185e06b954ca88790fa88e5d6b4f74",
+      "bytes": 1112300
+    },
+    "docs/source/notebooks/geolift.csv": {
+      "mode": "100644",
+      "git_oid": "85506db510f4b4eab6a8fb85635e6d7c427a0267",
+      "bytes": 29181
+    },
+    "docs/source/notebooks/index.md": {
+      "mode": "100644",
+      "git_oid": "08d093ba338c4a253e7cf3d6c2913b3b6f785027",
+      "bytes": 17426
+    },
+    "docs/source/notebooks/instrumental-variables-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "4bb3777efb51442ee2733e1388ff43931fc5ebf0",
+      "bytes": 1454558
+    },
+    "docs/source/notebooks/instrumental-variables-variable-selection-priors.ipynb": {
+      "mode": "100644",
+      "git_oid": "ba8891abc9da8baad2973f6a06be73534a8e1197",
+      "bytes": 1175578
+    },
+    "docs/source/notebooks/instrumental-variables-weak-instruments.ipynb": {
+      "mode": "100644",
+      "git_oid": "092c80bb9211b0cb17c5ea66e4d39045c8fcb808",
+      "bytes": 5851965
+    },
+    "docs/source/notebooks/interactive-fixed-effects-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "4fe8b60ce5fd863db1d52b047fbb626e2a839510",
+      "bytes": 311372
+    },
+    "docs/source/notebooks/interrupted-time-series-causalpy-vs-causalimpact.ipynb": {
+      "mode": "100644",
+      "git_oid": "1ba0c4f2d24aafc3745c5a02b5f2107e7ae31d41",
+      "bytes": 638051
+    },
+    "docs/source/notebooks/interrupted-time-series-comparative-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "cfef2af3f2dceb5da1835e7559db796981c7afb0",
+      "bytes": 962475
+    },
+    "docs/source/notebooks/interrupted-time-series-covid.ipynb": {
+      "mode": "100644",
+      "git_oid": "8f9c78453fedc1a5f2bc1148994b6d0bf2ecae1e",
+      "bytes": 2858417
+    },
+    "docs/source/notebooks/interrupted-time-series-lift-test.ipynb": {
+      "mode": "100644",
+      "git_oid": "f8f77609fbe8a276a5406ff2f71c10ced5100b11",
+      "bytes": 1914416
+    },
+    "docs/source/notebooks/interrupted-time-series-placebo-in-time-analysis.ipynb": {
+      "mode": "100644",
+      "git_oid": "967b77bda5768e6282a602c4e846cb5eb5e53935",
+      "bytes": 1547503
+    },
+    "docs/source/notebooks/interrupted-time-series-post-intervention-analysis.ipynb": {
+      "mode": "100644",
+      "git_oid": "6b4ab0dee1049ed65de262232da270ace2f0b6df",
+      "bytes": 83869
+    },
+    "docs/source/notebooks/interrupted-time-series-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "a6a22b069d04af6669800b9511fa80d4e8ea39f1",
+      "bytes": 535539
+    },
+    "docs/source/notebooks/interrupted-time-series-sklearn.ipynb": {
+      "mode": "100644",
+      "git_oid": "d2bcac1e8d14404dd4fef1f2f131ed6c78eb81b6",
+      "bytes": 291524
+    },
+    "docs/source/notebooks/inverse-propensity-latent.ipynb": {
+      "mode": "100644",
+      "git_oid": "46f7f3cc9d665dcc9d0efdf7a0685de3fb87f42b",
+      "bytes": 1187681
+    },
+    "docs/source/notebooks/inverse-propensity-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "3b71a85353ed18b9dfdcad467e71aea2718f1ea5",
+      "bytes": 1504159
+    },
+    "docs/source/notebooks/multi-cell-geolift.ipynb": {
+      "mode": "100644",
+      "git_oid": "a085f7b758234140809e1e44603c9a6ab82e6a99",
+      "bytes": 3538009
+    },
+    "docs/source/notebooks/panel-fixed-effects.ipynb": {
+      "mode": "100644",
+      "git_oid": "6aa34d36a8c0e7327cbcfb2ef703cc7a5c717919",
+      "bytes": 3820440
+    },
+    "docs/source/notebooks/piecewise-interrupted-time-series-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "f4613c84837f5113c1874bab783b79a484018446",
+      "bytes": 2604455
+    },
+    "docs/source/notebooks/pipeline-workflow.ipynb": {
+      "mode": "100644",
+      "git_oid": "3988f57042f7d0768eb7da2fc0eb7e6050293f72",
+      "bytes": 403433
+    },
+    "docs/source/notebooks/regression-discontinuity-donut-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "72a103ea81f2dfb18bc1f7d9ded07584457eae95",
+      "bytes": 1050632
+    },
+    "docs/source/notebooks/regression-discontinuity-drinking-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "2af289050f8453c02d08217915acc9aa8c4ddc6b",
+      "bytes": 986729
+    },
+    "docs/source/notebooks/regression-discontinuity-drinking-sklearn.ipynb": {
+      "mode": "100644",
+      "git_oid": "408753a25a45636404e55193d03221873a1c516e",
+      "bytes": 108481
+    },
+    "docs/source/notebooks/regression-discontinuity-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "c84fd598317a2c84c7024e57ab741ec97faab264",
+      "bytes": 1341822
+    },
+    "docs/source/notebooks/regression-discontinuity-sklearn.ipynb": {
+      "mode": "100644",
+      "git_oid": "47a24e036032f2ac1b55a106437051877feaf194",
+      "bytes": 648321
+    },
+    "docs/source/notebooks/regression-kink-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "82565ef714453e8614172ee1990ea91057ed5752",
+      "bytes": 1791932
+    },
+    "docs/source/notebooks/reporting-demo.ipynb": {
+      "mode": "100644",
+      "git_oid": "ff9ac4ec8b3c17aefff92ec746d52a07ba79982e",
+      "bytes": 710369
+    },
+    "docs/source/notebooks/sensitivity_checks.md": {
+      "mode": "100644",
+      "git_oid": "22a657358469af0309b79db869fbbf49f3195189",
+      "bytes": 18944
+    },
+    "docs/source/notebooks/staggered-difference-in-differences-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "49b78a306b8fb2a50a0dbb16efa04de69f20a258",
+      "bytes": 836804
+    },
+    "docs/source/notebooks/synthetic-control-brexit-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "b4e7b88c7f0a82eb74a208c9034d6b4178bee121",
+      "bytes": 1550606
+    },
+    "docs/source/notebooks/synthetic-control-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "134bccdb9579d6424f9fb444bd1647723f9642a6",
+      "bytes": 997374
+    },
+    "docs/source/notebooks/synthetic-control-sklearn.ipynb": {
+      "mode": "100644",
+      "git_oid": "9877b033edf1cffbe1bc0a3f4dd830fed202f5d7",
+      "bytes": 163014
+    },
+    "docs/source/notebooks/synthetic-difference-in-differences-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "77f6708c83ff0659e249867ea3f631b70277ecda",
+      "bytes": 871953
+    },
+    "docs/source/notebooks/up-down-control-geolift-pymc.ipynb": {
+      "mode": "100644",
+      "git_oid": "3daada34c2ad0510cf8e036113696cd18fa36e9c",
+      "bytes": 1887836
+    },
+    "docs/source/project-brief.md": {
+      "mode": "100644",
+      "git_oid": "f0e81fe6a53839ed98b53e72d24e12f0b6606731",
+      "bytes": 2525
+    },
+    "docs/source/references.bib": {
+      "mode": "100644",
+      "git_oid": "a80d9a596ef8d48cd8f473efea920374eeab33ea",
+      "bytes": 15958
+    },
+    "docs/source/robots.txt": {
+      "mode": "100644",
+      "git_oid": "9fe284a59aedd844e4cf71b8afa42691261cc15f",
+      "bytes": 582
+    },
+    "environment.yml": {
+      "mode": "100644",
+      "git_oid": "9f12f2256042f155d0a27def864fec6285b1b3dc",
+      "bytes": 882
+    },
+    "pyproject.toml": {
+      "mode": "100644",
+      "git_oid": "77c843cfb6fac67cc01c28fbabb8b31de1cacd33",
+      "bytes": 12345
+    },
+    "scripts/_ast_introspection.py": {
+      "mode": "100644",
+      "git_oid": "b0a1a9d5cd508051fe2d25ef5f15a3b6d18a6691",
+      "bytes": 5545
+    },
+    "scripts/audit_public_signatures.py": {
+      "mode": "100644",
+      "git_oid": "25e79928a29cde47f01b81c0dfc7324bdce09e94",
+      "bytes": 17229
+    },
+    "scripts/check_architecture_inventory.py": {
+      "mode": "100644",
+      "git_oid": "a1f39b5c3f4999537a2dce16ec4aa0c9e5caba3d",
+      "bytes": 7744
+    },
+    "scripts/check_public_exports.py": {
+      "mode": "100644",
+      "git_oid": "db126378d3234c21df973d3cb9f393166fb4c6e3",
+      "bytes": 9253
+    },
+    "scripts/check_rediraffe_redirects.py": {
+      "mode": "100644",
+      "git_oid": "22df3064cd8500e1db9e73fc0231a35d646ad0ee",
+      "bytes": 7727
+    },
+    "scripts/generate_gallery.py": {
+      "mode": "100755",
+      "git_oid": "ed74f01edb9ca852481211440e40a6147b104859",
+      "bytes": 11130
+    },
+    "scripts/generate_plots.py": {
+      "mode": "100644",
+      "git_oid": "2781c0b4e57cf1629ca06c78cd1b227061b8a862",
+      "bytes": 9904
+    },
+    "scripts/migration_baseline/README.md": {
+      "mode": "100644",
+      "git_oid": "e9eaf854c869bda3566b9931f4f02c899bd919d0",
+      "bytes": 18243
+    },
+    "scripts/migration_baseline/REPORT_TEMPLATE.md": {
+      "mode": "100644",
+      "git_oid": "60f89a55485cee97fa2a9c5003b291d0f8401d86",
+      "bytes": 6095
+    },
+    "scripts/migration_baseline/harness.py": {
+      "mode": "100644",
+      "git_oid": "4eeecaf4314a03de7d7c1e03077fbdbef33da554",
+      "bytes": 114341
+    },
+    "scripts/run_notebooks/README.md": {
+      "mode": "100644",
+      "git_oid": "745ce071b597b8f06c3e1ba770d9268604b0231e",
+      "bytes": 3884
+    },
+    "scripts/run_notebooks/injected.py": {
+      "mode": "100644",
+      "git_oid": "74d4e226235086acef7db62efe04de5630f2fc98",
+      "bytes": 3256
+    },
+    "scripts/run_notebooks/runner.py": {
+      "mode": "100644",
+      "git_oid": "6b2da68cb4415310c4ae86ab1b34d51e83d14405",
+      "bytes": 14504
+    },
+    "scripts/run_notebooks/skip_notebooks.yml": {
+      "mode": "100644",
+      "git_oid": "2adc58789526553768aa5b846f27df987832ca6a",
+      "bytes": 627
+    },
+    "scripts/validate_docstring_lists.py": {
+      "mode": "100644",
+      "git_oid": "c8a1dd58cb427b61083266d0b953f486c0ff5fa0",
+      "bytes": 4382
+    },
+    "scripts/validate_notebooks.py": {
+      "mode": "100644",
+      "git_oid": "e7b71d491d38385ba69fd962f20b19e182001565",
+      "bytes": 7782
+    },
+    "uv.lock": {
+      "mode": "100644",
+      "git_oid": "cf509a15da5c5f6ac1cae1f73b48d821a8be5321",
+      "bytes": 1086008
+    }
+  },
+  "source_bytes": 66047069,
+  "target_notebook": "docs/source/notebooks/interrupted-time-series-comparative-pymc.ipynb",
+  "uv": {
+    "filename": "uv-0.13.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "url": "https://files.pythonhosted.org/packages/5c/43/0688ff5142934238f2812e348f4a24e09b57d48bfb38dd8f850325a0d9de/uv-0.13.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl",
+    "size": 17333810,
+    "digests": {
+      "blake2b_256": "5c430688ff5142934238f2812e348f4a24e09b57d48bfb38dd8f850325a0d9de",
+      "md5": "2e3c3936d9deccce95a2d12d6f75e4c1",
+      "sha256": "22759b8895e1103578de6fb4cd27e94b4399d021023378d29f01333717751fba"
+    }
+  },
+  "execution_enabled": true,
+  "status": "DISABLED_WHOLE_BASELINE_PACKET_PENDING_CLAUDE_EXECUTION_REVIEW",
+  "target_seconds": 3000,
+  "absolute_seconds": 3600,
+  "validation_branch": "validate-causalpy926-baseline-g0",
+  "workflow_path": ".github/workflows/validate-causalpy926-baseline-g0.yml",
+  "input_images": [
+    "python@sha256:034c3e9d991f148d14c32ff8350286b91420baca7757d37819c7a9cc771317a0"
+  ],
+  "lanes": {
+    "baseline": {
+      "memory_gib": 10,
+      "minimum_start_disk_gib": 30,
+      "initial_available_gib": 10,
+      "network_gib": 20
+    }
+  },
+  "phase_caps_seconds": {
+    "bootstrap": 360,
+    "environment": 600,
+    "imports": 60,
+    "native": 360,
+    "mock": 180,
+    "prek": 600,
+    "codespell": 120,
+    "sphinx": 360,
+    "render": 120,
+    "evidence": 120
+  },
+  "one_attempt": true,
+  "product_source_changes": false,
+  "acceptance": {
+    "role": "UNMODIFIED_BASELINE_ONLY",
+    "all_required_phases": [
+      "realGit/process/clock/evidence helperfixtures",
+      "actualUV/Graphviz/Chromium/Popplernativefixtures",
+      "unlocked docs thenprojecttestdocsclosure",
+      "nativefullnotebookincludingdiagnostics/codeidentity/outputdrift",
+      "exacttargetupstreammock",
+      "wholeprekallfilesincludinguvlock",
+      "exactCIcodespellconverterandwholecodespell",
+      "nativemakehtmlincludinggallery",
+      "offlineChromecompletePDFandtopviewport",
+      "allactualexportedpagepixels inspected byCodex",
+      "Claudeactualresultsreview"
+    ],
+    "runtime_receipt_not_full_validation": "Hostpassedmeansallruntimephasescompleted; full_validation_passed remainsfalseuntilpixelinspection+actualClaude review.",
+    "pristine": "no gitstatusporcelaindelta aftereachphase, nofix/retry",
+    "native": "Onlytargetnotebook maychange; samecode/prose, realfullsampling, diagnosticsnotautoconvergenceclaim"
+  },
+  "resource_price": {
+    "basis": "Current full339-file66.05MBsource/real docs-test extra specs/pinneduv17.33MB/compilerbase380.55MB. Hosted warmcache notassumed. New browseraptclosure/unlockedscientificenvironment/prehooks unmeasuredboundedG0 inputs, notfeasibilityproof.",
+    "starting_disk_gib": 30,
+    "network_cap_gib": 20,
+    "apt_extra": "graphviz chromium poppler-utils; dpkgfullclosure+binaryversionsrecorded, actualbuiltimageIDfrozenforthisrun",
+    "prek": "Separatetoolvenv prek0.5.7 fromexactcurrentuvlock, absentfromtestdocs; doesnotreplacetheunlockedprojectenv.",
+    "memory": "10GiBcgroupnoswap/8GiBplanning; actualsamplerpeak+2GiB andfreshhostreservebefore native/Sphinx; noOOMretry.",
+    "new_render_cost": "Offline Chromium/Popplerphase120s plusbrowserfixturewithin360sbootstrap. Fulltestscope unchanged.",
+    "cold_route_unverified": [
+      "actualapt/imagebuild",
+      "actualunlockedresolution",
+      "allprekhookenvdownloads",
+      "native/fullsitepeakandduration",
+      "renderedpagepixels"
+    ]
+  },
+  "packet_sha256": {
+    "collect.py": "557f10432d100ad1f6e6cd3c1d62ff2310426d3802f09122cbc2878d0ca971a1",
+    "inside.py": "4c0f9bce7029683b1f9323f9188a24d112f819e5da4ca4b2ac0cef9d64c74093",
+    "workflow.yml": "6ab660ed3deb8fff88b48727b30f329e71e17b0108034c974ee4e60e9605f7e1",
+    "Dockerfile": "c2b80de502e5fa34f4331f2a96ef9963a0b422d541f41897477688f1506e6cc2",
+    "host.py": "5dcbe74d8b3fb36b1438595b7106aaeb8b4f36a4bb62e3499e35a134f5edf651",
+    "source_identity.py": "e8581f8698bd6211a5d30b15ce787da500de8955566758d2bbd7182bc78ce3d5",
+    "evidence_export.py": "2fb2b90f3e072f34ae5f9e40c6ee0cdc6f1afd7cf01e82d23bb1c98c92726dc0",
+    "validation_runtime.py": "1f2f5402153bfc06f1c5719dcbdd1773eaf7d4cd5c525bc0b94ffcf529a15573",
+    "fixtures.py": "f8e0146d0007e904531e769d1a75d33ea340a392b2ede4779b57900040d8f160",
+    ".github/workflows/validate-causalpy926-baseline-g0.yml": "6ab660ed3deb8fff88b48727b30f329e71e17b0108034c974ee4e60e9605f7e1"
+  }
+}

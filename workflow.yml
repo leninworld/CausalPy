@@ -1,0 +1,30 @@
+name: Measure CausalPy comparative ITS baseline
+on:
+  push:
+    branches: [validate-causalpy926-baseline-g0]
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: causalpy926-baseline-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  baseline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          path: packet
+          persist-credentials: false
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          repository: pymc-labs/CausalPy
+          ref: 35a8c5f9dde5d3a49e6b2043e3b70b567af8de08
+          path: source
+          persist-credentials: false
+      - name: Complete unchanged notebook baseline in owned Docker
+        env:
+          VALIDATION_LANE: baseline
+          GH_TOKEN: ${{ github.token }}
+        run: python3 packet/host.py
